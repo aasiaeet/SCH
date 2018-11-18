@@ -1,0 +1,53 @@
+\documentclass{NSF}
+
+
+\begin{document}
+
+% A. Cover Sheet
+% A number of the boxes contained on the Cover Sheet are
+% electronically pre-filled as part of the FastLane login process
+% Complete the rest of your info there
+
+% B. Project Summary
+\title{DEALER: \underline{D}ata \underline{E}nrichment \underline{Al}gorithms for Predicting \underline{E}xtremely \underline{R}are Multi-Drug-Resistant Healthcare Associated Infections}
+\newsection{B}
+\input{sections/0summary}
+
+% C. Table of Contents 
+% A Table of Contents is automatically generated for the proposal by FastLane
+
+% D. Project Description
+\newpage\newsection{D}
+\input{sections/1description}
+
+% E. References Cited
+\newpage\newsection{E}
+\renewcommand\refname{References Cited}
+\bibliography{sch18}
+% I prefer to use the IEEE bibliography style. 
+% That's  NOT required by the NSF guidelines. 
+% Feel Free to use whatever style you prefer
+\bibliographystyle{IEEEtran}
+
+% F. Biographical Sketch(es)
+\newpage\newsection{F}
+\input{sections/2bio}
+
+% G. Budget Justification
+\newpage\newsection{G}
+\input{sections/3budget}
+
+%  H. Current and Pending Support
+\newpage\newsection{H}
+\input{sections/4support}
+
+% I. Facilities, Equipment and Other Resources
+\newpage\newsection{I}
+\input{sections/5resources}
+
+% J. Special Information and Supplementary Documentation
+\newpage\newsection{J}
+\input{sections/6data}		% Data Management Plan (Required)
+%\input{sections/postdoc} % Postdoctoral Researcher Mentoring Plan (if applicable)
+
+\end{document}

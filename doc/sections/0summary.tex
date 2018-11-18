@@ -1,0 +1,26 @@
+{\bf Objective/Motivation:} Healthcare-associated infections (HAI) affects hundreds of thousands of patients every year in the U.S. and burden the healthcare systems with billions of dollars. Although the number of HAI cases has decreased due to the advancement of care and infection prevention guidelines, the rise of MultiDrug-Resistant Organisms (MDRO) continues to challenge HAI treatment. Timely and accurate prediction of patients' risk of developing MDRO-causing HAI during their hospital stay offers a potentially valuable vantage point for the care team to carry out proper preventative measures. We propose to leverage recent advances in machine learning to develop novel methods that accurately predict for each patient the risk of developing any of the extremely rare but hard to treat MDRO-caused infections using the longitudinal patients' data.% which is regularly collected. 
+
+Our goal is to develop a new interpretable machine learning system, DEALER, to timely and accurately predict the risk of MDRO-caused infections and integrate it to the learning laboratory of the Ohio State University hospitals to continually use the flux of patients' data and provide the care team with actionable information to prevent HAIs. Desired prediction tasks include both classification, e.g., predicting if a patient develops an infection next week or not, and regression, e.g., time to infection. Many of the MDROs are extremely rare and therefore per infection prediction is very challenging and needs development of new tailored machine learning methods. We envision DEALER as a novel machine learning algorithm that leverages all of the pooled data from different MDROs infection cases but separately predicts the risk of each type of infection. In this manner, we enrich the dataset for each specific infection type by using all available information from other pathogens and learn both shared predictive risk factor between MDROs and individual per specific risk factors. DEALER will integrate heterogeneous sources of data like different hospitals and units therein while leveraging the available hierarchy of data source to improve learning outcomes.
+%In fact, the only well-studied pathogen MDRI is the most prevalent one, c diff.
+
+{\bf Team, Challenges, and Intellectual Merit:} We propose a four-year research initiative during which we will build a machine learning system for real-time MDRO-caused HAI prediction and integrate it to the Ohio State Hospital system. Our team brings together two PIs with expertise in machine learning and data mining (from the University of Minnesota and the Ohio State University) and two PIs with expertise in bioinformatics and infectious diseases (from the Ohio State University). Our project will address several fundamental challenges:
+
+\underline{Prediction of rare events:} We will develop novel machine learning algorithms that deal with extremely imbalance datasets by leveraging similarities and differences between rare events. 
+
+\underline{Structure of data:} We will exploit the inherent structure of our heterogeneous data source to improve HAI prediction. Sources of data heterogeneity are hospitals and units inside each of them which makes the prediction of HAI for each patient interconnected not only to the patients in the same unit but also link the outcome to other units and patients therein. 
+
+\underline{Real-time Prediction:} Timely prediction of HAI risk is a significant factor determining the utility of any preventative intervention. We will pursue a real-time prediction strategy that utilizes longitudinal patient data to notify the clinicians for proper, timely intervention.  
+
+\underline{Interpretability}: We will incorporate recent advances in interpretable machine learning into our system in order to explain the prediction outcomes for the care team. 
+
+\underline{Missing data:} We will investigate different data imputation strategy to address the common missing data phenomena in electronic health records.  
+
+\underline{Hidden factors:} We will take into account the presence of many critical unknown factors like cleaning protocols and colonized carriers and ensure that DEALER outcome is robust to them.
+
+
+
+{\bf Intellectual Merit} 
+
+%The statement on intellectual merit should describe the potential of the proposed activity to advance knowledge.
+{\bf Broader Impacts} 
+%The statement on broader impacts should describe the potential of the proposed activity to benefit society and contribute to the achievement of specific, desired societal outcomes.

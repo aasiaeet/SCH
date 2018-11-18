@@ -1,0 +1,205 @@
+\section{Project Description}
+\subsection{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% What is HAI? Why is it important to address?(Cost and Occurrence)
+\emph{Hospital-Acquired Infections} (HAI) or more broadly healthcare-associated infections are linked with high rates of disease and death among hospitalized patients \cite{cdc} and their elimination is a priority of the Department of Health and Human Services \cite{hhs}. HAIs are infections people get while they are receiving health care for another condition are often preventable \cite{progress}. It is estimated that at any given time, about 1 in 25 inpatients have HAI \cite{magill2014multistate, hhs}. Other studies report the estimated number of HAI associated death to be almost 99000 per year \cite{klevens2007estimating} while burdening the U.S. healthcare budget by \$5 to \$10 billion annually \cite{stone2005economic}. Approximately one-third of HAIs are preventable \cite{yokoe2014compendium}.   
+
+
+%which costs the US healthcare system ? dolloars annually and burden . 
+%The Centers for Disease Control and Prevention (CDC) in 2007 estimated that 1.7 million health care–associated infections incidents in over U.S. per year. A more recent estimate of HAIs in 2011 suggests that more than 700,000 infections per year burdens U.S. acute care hospitals and indicates that on any given day approximately 1 of every 25 inpatients in U.S. acute care hospitals has at least one health care–associated infection \cite{magill2014multistate} .
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% What has been done? What can be done to improve?
+Though the rate of many device-associated HAIs has dropped over the last decade \cite{progress} increasing trends in prevalence rates of HAIs caused by \emph{Multi-Drug Resistant Organisms} (MDRO) has been observed \cite{balkhair2014epidemiology, actionplan}. A study found that 16\% of all HAIs are caused by MDROs \cite{hidron2008antimicrobial}. In 2013, the Centers for Disease Control and Prevention (CDC) published a threat report outlining the top eighteen drug-resistant threats to the U.S. four of which are healthcare associated with more than 600,000 total occurrences and 28000 death per year \cite{resistance}. There has been focused studies to predict patients risk of developing Clostridioides difficile (C. diff.), the most prevalent cause of HAI which sometimes become drug-resistant \cite{oh2018generalizable, wiens2012learning, wiens2014learning, wiens2012patient}. Due to the scarcity of HAIs associated with other MDROs, comprehensive analysis of risk factors and patient risk prediction for them remained unexplored. 
+
+
+%(e.g., healthcare-associated exposure, age, underlying disease, etc.), HAIs
+%continue to be a signicant problem throughout the world (Klevens et al., 2007). In recent
+%years there have been numerous articles citing our inability to prevent HAIs (Miller et al.,
+%2011; Umscheid et al., 2011; Sievert et al., 2013).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% What do we propose?
+We propose the development of a machine learning (ML) system, called DEALER, that systematically uses the pooled data from multiple extremely rare HAI-causing MDROs and accurately predict the temporal risk of a patient developing any of the MDROs during their stay at hospitals. We hypothesize that enriching our samples by merging various heterogeneous source of data will both improve the prediction accuracy of all adverse events and also provides more interpretable models. In particular, our goal is to integrate DEALER into the Ohio State University's (OSU) patient safety learning lab called IDEA4PS whose primary goal is to improve workflows and information transfers in the healthcare environment in order to enhance patients' outcomes.  
+
+The ML system that we envision is a framework for surveillance of ``hot spots'' of HAIs which exploits electronic medical records and provides real-time risk prediction and recognizes concerning trends sooner so that clinicians can implement timely and effective interventions. Beyond benefiting from enriched heterogeneous MDROs-caused incidents, DEALER also furthers its performance by taking into account hierarchy of hospitals, units, and wards along with their relationship with each other.
+ 
+%providing the ability to track adverse events longitudinally over the spectrum of a particular
+%patient’s receipt of health services. More research on the use of electronic data for
+%surveillance of HAIs is needed. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% What will be our contribution?
+Contributions...
+
+
+
+
+
+
+
+% Define terminology, data type in detail
+\subsection{Background and Terminology}
+\subsubsection{Types of HAI}
+HAIs can be divided into two broad categories of device-associated infections or Surgical-Site Infections (SSI). Primary device-associated infections include Central Line-Associated Bloodstream Infection (CLABSI), Catheter-Associated Urinary Tract Infection (CAUTI), and Ventilator-Associated Pneumonia (VAP). Recent studies show reductions in CLABSI incidents due to the advancement in preventative activities while SSI and CAUTI have not experienced the same lessening. 
+
+Another way of grouping HAIs is based on the pathogen causing the infection. Although bacteria, fungi, and viruses can cause HAI, three of the most threatening HAI causes are all bacteria. In the followings, we briefly introduce each one of the MDRO studied in this proposal:
+
+{\bf Clostridium difficile (C. diff):} C. diff bacteria causes life-threatening diarrhea and colitis (an inflammation of the colon). It was estimated to cause almost half a million infections in the United States in 2011, and 29,000 died within 30 days of the initial diagnosis. Those most at risk are people, especially older adults, who take antibiotics and also get medical care.
+
+{\bf Methicillin-resistant Staphylococcus aureus (MRSA):}  Methicillin-resistant Staphylococcus aureus (MRSA) is a type of staph bacteria that is resistant to certain antibiotics called beta-lactams. These antibiotics include methicillin and other more common antibiotics such as oxacillin, penicillin, and amoxicillin. In the community, most MRSA infections are skin infections. More severe or potentially life-threatening MRSA infections occur most frequently among patients in healthcare settings.
+
+{\bf Vancomycin-resistant Enterococcus (VRE):} Enterococci cause a range of illnesses, mostly among patients receiving healthcareVancomycin-resistant Enterococci are specific types of antimicrobial-resistant bacteria that are resistant to vancomycin, the drug often used to treat infections caused by enterococci. Enterococci are bacteria that are typically present in the human intestines and in the female genital tract and are often found in the environment. These bacteria can sometimes cause infections. Most vancomycin-resistant Enterococci infections occur in hospitals. 
+
+\subsubsection{Terminology}
+{\bf Antimicrobial resistance} The result of bacteria changing in ways that reduce or eliminate the effectiveness of drugs, chemicals, or other agents
+used to cure or prevent infections. Antibiotic resistance is one type of antimicrobial resistance. 
+
+{\bf Laboratory identified (LabID) Event:} For reporting to the National Healthcare Safety Network; an infection is considered laboratory
+identified when a patient sample is tested and confirmed positive by laboratory test only (i.e., clinical evaluation of the patient is not required).
+
+{\bf Hospital-onset HAI:} For LabID events, an infection is considered hospital-onset if the positive specimen is collected on or after the fourth day of admission.
+Methicillin-resistant Staphylococcus aureus (MRSA): A type of staph bacteria that is resistant to many antibiotics. In this report, the MRSA data include all laboratory identified hospital-onset MRSA bacteremia (bloodstream infections) reported to the National Healthcare Safety Network from all inpatient locations in
+the facility.
+
+{\bf Multi-drug resistant organism (MDRO) infection:} An infection caused by a germ that is resistant to multiple classes of antimicrobials. In some cases, the germs have become so resistant that no available antibiotics are effective against them.
+
+{\bf Targeted Assessment for Prevention (TAP) strategy:} A method developed by the Centers for Disease Control and Prevention (CDC) to use data for action to prevent healthcare-associated infections (HAIs). The TAP strategy targets healthcare facilities and specific units within facilities with a disproportionate burden of
+HAIs to address infection prevention gaps.
+
+%bacteria that cause life-threatening diarrhea. Often,
+%C. difficile infections occur in hospitalized or recently hospitalized
+%patients. In this report, the C. difficile data include all laboratory
+%identified hospital-onset infections reported to the National
+%Healthcare Safety Network from all inpatient locations in the
+%facility, with the exception of the neonatal intensive care units and
+%well-baby locations.
+
+
+%MRSA remains an important cause of HAIs, and it is endemic in most hospitals in the U.S. In
+%addition to increasing the total burden of S. aureus infection, health care-associated MRSA
+%infections are associated with increased morbidity and mortality compared with infections
+%caused by methicillin-susceptible strains. Furthermore, MRSA has emerged as an important
+%cause of infection in the community. Fifty-nine percent of all purulent skin infections
+%evaluated in U.S. emergency departments are caused by MRSA. MRSA infections, both
+%health care- and community-associated, are generally caused by a very limited number of
+%strains, suggesting that most cases result from direct or indirect person-to-person
+%transmission of MRSA.
+
+% These infections lead to the loss of tens of thousands lives and cost the U.S. health care system billions of dollars each year. Though many risk factors are well-known for some types of HAI, particularly central-catheter-associated bloodstream infections, other types of HAIs continue to burden patients and health care system with ? costs. Is has been estimated by the Centers for Disease Control and Prevention (CDC) that 1.7 million health care-associated infections occur per year over U.S. hi
+
+%Catheter-associated urinary tract infection (CAUTI): A urinary tract
+%infection (UTI) is an infection involving any part of the urinary
+%system, including urethra, bladder, ureters, and kidney. When a
+%urinary catheter is not put in correctly, not kept clean, or left in a
+%patient for too long, germs can travel through the catheter and
+%infect the bladder and kidneys. In this report, the CAUTI data
+%include all infections reported to the National Healthcare Safety
+%Network from all applicable locations, including intensive care
+%units and wards. 
+%
+%Central line-associated bloodstream infection (CLABSI): When
+%a tube is placed in a large vein and not put in correctly or kept
+%clean, it can become a way for germs to enter the body and cause
+%deadly infections in the blood. In this report, the CLABSI data
+%include all infections reported to the National Healthcare Safety
+%Network from all applicable locations, including intensive care
+%units, neonatal intensive care unit, and wards.
+
+%Healthcare-associated infection (HAI): An infection patients can
+%get while receiving medical treatment in hospitals, outpatient
+%clinics, nursing homes, and other facilities where people receive
+%care
+%
+%Surgical site infection (SSI): When germs get into an area where
+%surgery is or was performed, patients can get a surgical site
+%infection. Sometimes these infections involve only the skin. Other
+%SSIs can involve tissues under the skin, organs, or implanted
+%material (an object or material inserted or grafted into the body,
+%such as prosthetic joints). 
+
+%Ventilator-associated events (VAE): A ventilator is a machine used
+%to help a patient breathe by giving oxygen through a tube placed
+%in a patient’s mouth or nose, or through a hole in the front of the
+%neck. An infection, such as pneumonia, may occur if germs enter a
+%patient through the tube. 
+
+
+\subsubsection{IDEA4PS Dataset}
+In 2015, the OSU was awarded a four-year program project grant from the Agency of Healthcare Research and Quality to establish The Institute for the Design of Environments Aligned for Patient Safety (IDEA4PS). This grant is being used to identify and explore how feedback of information can be used to inform the development of robust practices that lead to improved patient safety. As a part of IDEA4PS temporal patient's data has been collected to conduct surveillance of healthcare-acquired infections in real time and to provide clinicians with actionable information. 
+
+We will leverage IDEA4PS data to train our ML system, DEALER and integrate it to the OSU hospital system.
+%This learning lab integrates system engineering, design, human factors, organizational behavior, evaluation, and data analysis to explore the way feedback of information is incorporated into the adaptation of work systems to enhance patient safety. The intent is to frame how all kinds of data, both those currently collected and newly acquired, are leveraged to actionable information and linked to patient outcomes.
+
+
+% What are the possible interventions
+\subsubsection{Interventions}
+Although it seems that for the patients with higher risk of infection the care team should carry out the most effective interventions, in reality, this is not the best measure. Serious interventions are usually more difficult to tolerate by the patient, and they are of more significant cost for the healthcare system. Besides, for the specific intervention of antibiotic administration the rise of drug-resistant organisms urge us to use antibiotics only if they are absolutely necessary and by following strict ``antibiotic stewardship'' guidelines. 
+
+The epidemiology of emergent MDROs in health care settings must be monitored to allow for appropriate adaptations to current infection control interventions, including antimicrobial prophylaxis, isolation strategies, and screening strategies. Vaccines are also a powerful way to prevent thousands of infections and deaths that occur each year for diseases such as influenza and hepatitis. Currently, there are eight vaccines licensed in the U.S. that target pathogens that can be acquired in health care settings. The appropriate use of these lifesaving interventions needs to be defined. 
+
+A successful ML system should take into account the range of possible intervention and based on its confidence about the predicted outcome suggest a proper intervention. 
+
+
+% What are the specific questions that we want to address? 
+% Why are these questions challenging?
+\subsection{Motivating Problems and Challenges}
+{\noindent \bf Problem 1:} Given a set of MDROs where some of them are extremely rare, we want to leverage patients static (demographic, sex, etc.) and temporal features (vitals, lab results, etc.) to predict the desired outcomes. Examples of the desired outcome include timely prediction of the occurrence of a specific MDRO incident (discrete outcome) or prediction of time to infection (continuous outcome). 
+
+{\noindent \bf Problem 2:} Given a task of predicting an extremely rare HAI, incorporate the domain expert knowledge about the involved risk factors into the ML system and provide an interpretable answer that suggests which collection of risk factors are affecting the prediction outcome the most. 
+
+{\noindent \bf Problem 3:} Given a heterogeneous source of data like hospitals and units therein where the whole environment that data has been gathered is different and also collected features are not exactly similar, tailor the prediction for each hospital or unit while leveraging the similarities between each environment. 
+
+We describe below some of the key technical challenges involved in addressing these problems and how we plan to solve them:
+
+\underline{Prediction of rare events:} As reported by many studies, HAIs affect less than 10\% of the hospital admitted patients which makes any collected dataset highly imbalanced. Among all HAIs some of them like C. diff. are rare while others like VRE are extremely rare. Highly imbalanced data induce unique challenges for learning algorithms. We propose to ... 
+
+\underline{Structure of data:} We propose to study admitted patients to the OSU hospital system which consists of x main hospitals each of which has between y to z units. A naive algorithm would put together all of the patients' data and analyze that as a single dataset. However, a more sophisticated approach will take into account the hierarchical structure that the hospitals induce on patients which is extremely important in the context of infectious diseases. Another important structure is the relation of different MDRO, exploiting similarities and differences between MDROs will potentially improve the outcome of prediction algorithms. 
+
+\underline{Timely Prediction}: Data shows that the longer a patient stays in the hospital, the more it is probable to acquire an HAI. Therefore using patients longitudinal data is essential for any practical algorithm. Also, evaluation of any method should consider the length of time window between flagging a patient as high risk and the actual infection happening.  
+
+\underline{Interpretability}: Since different outcomes of the risk prediction algorithm require the care team to carry out different preventative measures, e.g., isolation, or administration of prophylaxis, the algorithm should explain its decisions. Clinicians are hesitant to incorporate weakly evaluated black-box ML algorithms into their practice. Therefore, interpretability should be addressed in every level of the proposed ML system. 
+
+\underline{Missing data:}  The widespread prevalence of missing data in electronic health records presents a significant challenge for any ML algorithm. Different causes of missing data in the EHR data may introduce unintentional bias, and therefore any level of the proposed ML system should be robust to missing data. 
+
+\underline{Hidden factors:} Many known risk factors for HAIs are hard to measure and therefore are unknown to the algorithm. Factors like cleaning protocols, quality of care, and the presence of colonized carrier are important hidden risk factors that make the prediction task more complicated.  For example, it is known that the C. diff. spores can persist on environmental surfaces, and therefore the role of environmental cleaning is likely to be significant. For MRSA, it is widely held that the primary reservoir for transmission in the health care setting is infected or colonized patients and that patient-to-patient transmission occurs indirectly via transient carriage by health care personnel or through shared equipment that is contaminated. 
+
+%In 2005, there were an estimated 94,000 invasive MRSA infections in the United States, which were
+%associated with nearly 18,000 deaths. Of these invasive infections, 86% were associated with
+%health care delivery, but two-thirds of these HAIs had their onset outside the hospital setting.
+%Recent data suggest that between 2005 and 2008, rates of invasive health care-associated
+%MRSA infection decreased.12
+%Although the optimal strategy for preventing and controlling health care-associated MRSA
+%has not been fully determined, it is likely that successful control requires a multifaceted
+%approach that may vary according to the individual characteristics of a health care facility, as
+%outlined in the CDC guidance document Management of Multidrug-resistant Organisms in
+%Healthcare Facilities, 2006.
+%Additionally, there is a growing recognition that the focus of
+%MRSA prevention on individual health care facilities needs to be broadened to incorporate
+%entire geographic regions. 
+
+
+
+
+\subsection{Technical Approach}
+Data sharing, data enrichment, multi task learning, sparse task differences, imbalanced classification. 
+
+\subsection{System Evaluation}
+Evaluation of any method should consider the length of time window between flagging a patient as high risk and the actual infection happening. 
+
+\subsection{Comparison of Our Approach to Related Work}
+
+\subsection{Community Outreach and Education}
+
+\subsection{Results from Prior NSF Support}
+
+\subsection{Collaboration Plan}
+
+\noindent
+\emph{\underline{Name of PI}}: NSF-Program (Award Number) ``Title of the Project'' (\$AMOUNT, PERIOD OF SUPPORT). 
+{\bf Publications:} List of publications resulting from the NSF award. A complete bibliographic citation for each
+publication must be provided either in this section or in the References Cited section of the proposal); if
+none, state: ``No publications were produced under this award.'' {\bf Research Products:} evidence of research products 
+and their availability, including, but not limited to: data, publications, samples, physical collections, software, 
+and models, as described in any Data Management Plan.
