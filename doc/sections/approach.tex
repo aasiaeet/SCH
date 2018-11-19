@@ -1,0 +1,24 @@
+Data sharing, data enrichment, multi task learning, sparse task differences, imbalanced classification.
+
+\noindent {\bf Problem 1:} A few questions/commentspotential directions:
+\begin{itemize}
+\item For patient specific prediction, consider/contrast with {\em Cox proportional hazards model} (CPHM), and other forms of {\em survival analysis}. Here, 'survival' refers to staying un-infected.
+\item For a group based model, consider/contrast with {\em multiple instance learning} (MIL). The goal here is to characterize if any one individual in a cohort will have MDR infection. The cohorts can be formed based on (static and temporal) patient covariates, say by clustering, and/orbased on physical location, e.g., a certain unit in a clinic. MIL have had mixed success in the literature, so we have to be careful about what we propose.
+\end{itemize}
+
+\noindent {\bf Problem 2:} How do we plan to make things interpretable? Couple of possible approaches:
+\begin{itemize}
+\item Importance of individual features: One can assess individual feature importance in nonlinear models, including random forests, gradient boosted trees, and deep nets, by an ablation study, i.e., by studying predictive accuracy by leaving each feature out. 
+\item Importance of sub-groups of features: Doing ablation study with sub-groups naively leads to an exponential blow-up in computation. One can consider doing PCA regression, sufficient dimensionality reduction, or Shapley value regression in such settings.
+\end{itemize}
+Few considerations in the current context: 
+\begin{itemize}
+\item Can such feature importance be done efficiently? 
+\item How does one take into account the fact that the target events are rare? 
+\item How does one handle the small sample regime, so feature importance is assessed at the population level, not because it helps overfit on the training set?
+\item How do the proposed approaches relate to sparse methods? Shall we use sparse methods instead?
+\item How do the proposed approaches related to frequent pattern mining for prediction problems?
+\end{itemize}
+
+\noindent {\bf Problem 3:} Since we will be combining data from multiple clinics, the samples are going to be disjoint (similar to our current data-sharing model), but the features will have some shared and some unique covariates (different from our current model).
+
