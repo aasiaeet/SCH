@@ -21,195 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{ehr}
-``Health it and health information exchange basics,''
-  \url{https://www.healthit.gov/topic/health-it-basics/benefits-ehrs},
-  accessed: 2018-11-24.
-
-\bibitem{yadav2018mining}
-P.~Yadav, M.~Steinbach, V.~Kumar, and G.~Simon, ``Mining electronic health
-  records (ehrs): a survey,'' \emph{ACM Computing Surveys (CSUR)}, vol.~50,
-  no.~6, p.~85, 2018.
-
-\bibitem{rajkomar2018scalable}
-A.~Rajkomar, E.~Oren, K.~Chen, A.~M. Dai, N.~Hajaj, M.~Hardt, P.~J. Liu,
-  X.~Liu, J.~Marcus, M.~Sun \emph{et~al.}, ``Scalable and accurate deep
-  learning with electronic health records,'' \emph{npj Digital Medicine},
-  vol.~1, no.~1, p.~18, 2018.
-
-\bibitem{shickel2018deep}
-B.~Shickel, P.~J. Tighe, A.~Bihorac, and P.~Rashidi, ``Deep ehr: A survey of
-  recent advances in deep learning techniques for electronic health record
-  (ehr) analysis,'' \emph{IEEE journal of biomedical and health informatics},
-  vol.~22, no.~5, pp. 1589--1604, 2018.
-
-\bibitem{kirby2016phekb}
-J.~C. Kirby, P.~Speltz, L.~V. Rasmussen, M.~Basford, O.~Gottesman, P.~L.
-  Peissig, J.~A. Pacheco, G.~Tromp, J.~Pathak, D.~S. Carrell \emph{et~al.},
-  ``Phekb: a catalog and workflow for creating electronic phenotype algorithms
-  for transportability,'' \emph{Journal of the American Medical Informatics
-  Association}, vol.~23, no.~6, pp. 1046--1052, 2016.
-
-\bibitem{shivade2013review}
-C.~Shivade, P.~Raghavan, E.~Fosler-Lussier, P.~J. Embi, N.~Elhadad, S.~B.
-  Johnson, and A.~M. Lai, ``A review of approaches to identifying patient
-  phenotype cohorts using electronic health records,'' \emph{Journal of the
-  American Medical Informatics Association}, vol.~21, no.~2, pp. 221--230,
-  2013.
-
-\bibitem{ng2014paramo}
-K.~Ng, A.~Ghoting, S.~R. Steinhubl, W.~F. Stewart, B.~Malin, and J.~Sun,
-  ``Paramo: a parallel predictive modeling platform for healthcare analytic
-  research using electronic health records,'' \emph{Journal of biomedical
-  informatics}, vol.~48, pp. 160--170, 2014.
-
-\bibitem{wiens2012patient}
-J.~Wiens, E.~Horvitz, and J.~V. Guttag, ``Patient risk stratification for
-  hospital-associated c. diff as a time-series classification task,'' in
-  \emph{Advances in Neural Information Processing Systems}, 2012, pp. 467--475.
-
-\bibitem{bitton2010framingham}
-A.~Bitton and T.~Gaziano, ``The framingham heart study's impact on global risk
-  assessment,'' \emph{Progress in cardiovascular diseases}, vol.~53, no.~1, pp.
-  68--78, 2010.
-
-\bibitem{levinson2010adverse}
-D.~R. Levinson and I.~General, ``Adverse events in hospitals: national
-  incidence among medicare beneficiaries,'' \emph{Department of Health and
-  Human Services Office of the Inspector General}, 2010.
-
-\bibitem{torio2006trends}
-C.~M. Torio, A.~Elixhauser, and R.~M. Andrews, ``Trends in potentially
-  preventable hospital admissions among adults and children, 2005--2010:
-  Statistical brief\# 151,'' 2006.
-
-\bibitem{progress}
-``National and state healthcare associated infectious: Progress report,''
-  \url{https://www.cdc.gov/HAI/pdfs/progress-report/hai-progress-report.pdf},
-  accessed: 2018-11-17.
-
-\bibitem{yokoe2014compendium}
-D.~S. Yokoe, D.~J. Anderson, S.~M. Berenholtz, D.~P. Calfee, E.~R. Dubberke,
-  K.~D. Eilingson, D.~N. Gerding, J.~P. Haas, K.~S. Kaye, M.~Klompas
-  \emph{et~al.}, ``A compendium of strategies to prevent healthcare-associated
-  infections in acute care hospitals: 2014 updates,'' \emph{Infection Control
-  \& Hospital Epidemiology}, vol.~35, no.~S2, pp. S21--S31, 2014.
-
-\bibitem{umscheid2011estimating}
-C.~A. Umscheid, M.~D. Mitchell, J.~A. Doshi, R.~Agarwal, K.~Williams, and P.~J.
-  Brennan, ``Estimating the proportion of healthcare-associated infections that
-  are reasonably preventable and the related mortality and costs,''
-  \emph{Infection Control \& Hospital Epidemiology}, vol.~32, no.~2, pp.
-  101--114, 2011.
-
-\bibitem{miller2011comparison}
-B.~A. Miller, L.~F. Chen, D.~J. Sexton, and D.~J. Anderson, ``Comparison of the
-  burdens of hospital-onset, healthcare facility-associated clostridium
-  difficile infection and of healthcare-associated infection due to
-  methicillin-resistant staphylococcus aureus in community hospitals,''
-  \emph{Infection Control \& Hospital Epidemiology}, vol.~32, no.~4, pp.
-  387--390, 2011.
-
-\bibitem{cdc}
-``Modeling infectious diseases in healthcare network (mind - healthcare),
-  center for disease control and prevention,''
-  \url{https://www.cdc.gov/hai/research/MIND-Healthcare.html}, accessed:
-  2018-11-17.
-
-\bibitem{scott2009direct}
-R.~D. Scott, ``The direct medical costs of healthcare-associated infections in
-  us hospitals and the benefits of prevention,'' 2009.
-
-\bibitem{klevens2007estimating}
-R.~M. Klevens, J.~R. Edwards, C.~L. Richards~Jr, T.~C. Horan, R.~P. Gaynes,
-  D.~A. Pollock, and D.~M. Cardo, ``Estimating health care-associated
-  infections and deaths in us hospitals, 2002,'' \emph{Public health reports},
-  vol. 122, no.~2, pp. 160--166, 2007.
-
-\bibitem{hhs}
-``National action plan to prevent healthcare-associated infections: roadmap to
-  elimination. washington, dc: Department of health and human services,''
-  \url{https://health.gov/hcq/prevent-hai.asp}, accessed: 2018-11-17.
-
-\bibitem{magill2014multistate}
-S.~S. Magill, J.~R. Edwards, W.~Bamberg, Z.~G. Beldavs, G.~Dumyati, M.~A.
-  Kainer, R.~Lynfield, M.~Maloney, L.~McAllister-Hollod, J.~Nadle
-  \emph{et~al.}, ``Multistate point-prevalence survey of health
-  care--associated infections,'' \emph{New England Journal of Medicine}, vol.
-  370, no.~13, pp. 1198--1208, 2014.
-
-\bibitem{stone2005economic}
-P.~W. Stone, E.~C. Hedblom, D.~M. Murphy, and S.~B. Miller, ``The economic
-  impact of infection control: making the business case for increased infection
-  control resources,'' \emph{American journal of infection control}, vol.~33,
-  no.~9, pp. 542--547, 2005.
-
-\bibitem{zimlichman2013health}
-E.~Zimlichman, D.~Henderson, O.~Tamir, C.~Franz, P.~Song, C.~K. Yamin,
-  C.~Keohane, C.~R. Denham, and D.~W. Bates, ``Health care--associated
-  infections: a meta-analysis of costs and financial impact on the us health
-  care system,'' \emph{JAMA internal medicine}, vol. 173, no.~22, pp.
-  2039--2046, 2013.
-
-\bibitem{balkhair2014epidemiology}
-A.~Balkhair, Y.~M. Al-Farsi, Z.~Al-Muharrmi, R.~Al-Rashdi, M.~Al-Jabri,
-  F.~Neilson, S.~S. Al-Adawi, M.~El-Beeli, and S.~Al-Adawi, ``Epidemiology of
-  multi-drug resistant organisms in a teaching hospital in oman: a one-year
-  hospital-based study,'' \emph{The Scientific World Journal}, vol. 2014, 2014.
-
-\bibitem{actionplan}
-``National and state healthcare associated infectious: Progress report,''
-  \url{https://health.gov/hcq/pdfs/hai-action-plan-acute-care-hospitals.PDF},
-  accessed: 2018-11-17.
-
-\bibitem{amr}
-``Antibiotic/antimicrobial resistant,''
-  \url{https://www.cdc.gov/drugresistance/about.html}, accessed: 2018-11-24.
-
-\bibitem{resistance}
-``Centers for disease control and prevention. antibiotic resistance threats in
-  the united states, 2013. atlanta, ga:us department of health and human
-  services, cdc,''
-  \url{https://www.cdc.gov/drugresistance/biggest_threats.html}, accessed:
-  2018-11-17.
-
-\bibitem{peng2017update}
-Z.~Peng, D.~Jin, H.~B. Kim, C.~W. Stratton, B.~Wu, Y.-W. Tang, and X.~Sun, ``An
-  update on antimicrobial resistance in clostridium difficile: Resistance
-  mechanisms and antimicrobial susceptibility testing,'' \emph{Journal of
-  clinical microbiology}, pp. JCM--02\,250, 2017.
-
-\bibitem{oh2018generalizable}
-J.~Oh, M.~Makar, C.~Fusco, R.~McCaffrey, K.~Rao, E.~E. Ryan, L.~Washer, L.~R.
-  West, V.~B. Young, J.~Guttag \emph{et~al.}, ``A generalizable, data-driven
-  approach to predict daily risk of clostridium difficile infection at two
-  large academic health centers,'' \emph{infection control \& hospital
-  epidemiology}, vol.~39, no.~4, pp. 425--433, 2018.
-
-\bibitem{wiens2012learning}
-J.~Wiens, J.~Guttag, and E.~Horvitz, ``Learning evolving patient risk processes
-  for c. diff colonization,'' in \emph{ICML Workshop on Machine Learning from
-  Clinical Data}, 2012.
-
-\bibitem{wiens2014learning}
-J.~Wiens, W.~N. Campbell, E.~S. Franklin, J.~V. Guttag, and E.~Horvitz,
-  ``Learning data-driven patient risk str. jpegication models for clostridium
-  difficile,'' in \emph{Open forum infectious diseases}, vol.~1, no.~2.\hskip
-  1em plus 0.5em minus 0.4em\relax Oxford University Press, 2014.
-
-\bibitem{hartvigsen2018early}
-T.~Hartvigsen, C.~Sen, S.~Brownell, E.~Teeple, X.~Kong, and E.~A.
-  Rundensteiner, ``Early prediction of mrsa infections using electronic health
-  records.'' in \emph{HEALTHINF}, 2018, pp. 156--167.
-
-\bibitem{weiner2016antimicrobial}
-L.~M. Weiner, A.~K. Webb, B.~Limbago, M.~A. Dudeck, J.~Patel, A.~J. Kallen,
-  J.~R. Edwards, and D.~M. Sievert, ``Antimicrobial-resistant pathogens
-  associated with healthcare-associated infections: summary of data reported to
-  the national healthcare safety network at the centers for disease control and
-  prevention, 2011--2014,'' \emph{infection control \& hospital epidemiology},
-  vol.~37, no.~11, pp. 1288--1301, 2016.
-
 \bibitem{mu2011improving}
 Y.~Mu, J.~R. Edwards, T.~C. Horan, S.~I. Berrios-Torres, and S.~K. Fridkin,
   ``Improving risk-adjusted measures of surgical site infection for the
@@ -316,6 +127,253 @@ M.~Mirsaeidi, P.~Peyrani, J.~A. Ramirez, and I.~M. through Pathway Assessment
   score,'' \emph{Clinical infectious diseases}, vol.~49, no.~1, pp. 72--77,
   2009.
 
+\bibitem{wiens2014learning}
+J.~Wiens, W.~N. Campbell, E.~S. Franklin, J.~V. Guttag, and E.~Horvitz,
+  ``Learning data-driven patient risk str. jpegication models for clostridium
+  difficile,'' in \emph{Open forum infectious diseases}, vol.~1, no.~2.\hskip
+  1em plus 0.5em minus 0.4em\relax Oxford University Press, 2014.
+
+\bibitem{sen2017crest}
+C.~Sen, T.~Hartvigsen, E.~Rundensteiner, and K.~Claypool, ``Crest-risk
+  prediction for clostridium difficile infection using multimodal data
+  mining,'' in \emph{Joint European Conference on Machine Learning and
+  Knowledge Discovery in Databases}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Springer, 2017, pp. 52--63.
+
+\bibitem{oh2018generalizable}
+J.~Oh, M.~Makar, C.~Fusco, R.~McCaffrey, K.~Rao, E.~E. Ryan, L.~Washer, L.~R.
+  West, V.~B. Young, J.~Guttag \emph{et~al.}, ``A generalizable, data-driven
+  approach to predict daily risk of clostridium difficile infection at two
+  large academic health centers,'' \emph{infection control \& hospital
+  epidemiology}, vol.~39, no.~4, pp. 425--433, 2018.
+
+\bibitem{labarbera2015prediction}
+F.~D. LaBarbera, I.~Nikiforov, A.~Parvathenani, V.~Pramil, and S.~Gorrepati,
+  ``A prediction model for clostridium difficile recurrence,'' \emph{Journal of
+  community hospital internal medicine perspectives}, vol.~5, no.~1, p. 26033,
+  2015.
+
+\bibitem{dubberke2011development}
+E.~R. Dubberke, Y.~Yan, K.~A. Reske, A.~M. Butler, J.~Doherty, V.~Pham, and
+  V.~J. Fraser, ``Development and validation of a clostridium difficile
+  infection risk prediction model,'' \emph{Infection Control \& Hospital
+  Epidemiology}, vol.~32, no.~4, pp. 360--366, 2011.
+
+\bibitem{kuntz2016predicting}
+J.~L. Kuntz, D.~H. Smith, A.~F. Petrik, X.~Yang, M.~L. Thorp, T.~Barton,
+  K.~Barton, M.~Labreche, S.~J. Spindel, and E.~S. Johnson, ``Predicting the
+  risk of clostridium difficile infection upon admission: a score to identify
+  patients for antimicrobial stewardship efforts,'' \emph{The Permanente
+  Journal}, vol.~20, no.~1, p.~20, 2016.
+
+\bibitem{actionplan}
+``National and state healthcare associated infectious: Progress report,''
+  \url{https://health.gov/hcq/pdfs/hai-action-plan-acute-care-hospitals.PDF},
+  accessed: 2018-11-17.
+
+\bibitem{pop2005rising}
+A.~E. Pop-Vicas and E.~M. D'agata, ``The rising influx of multidrug-resistant
+  gram-negative bacilli into a tertiary care hospital,'' \emph{Clinical
+  infectious diseases}, vol.~40, no.~12, pp. 1792--1798, 2005.
+
+\bibitem{edlin1992outbreak}
+B.~R. Edlin, J.~I. Tokars, M.~H. Grieco, J.~T. Crawford, J.~Williams, E.~M.
+  Sordillo, K.~R. Ong, J.~O. Kilburn, S.~W. Dooley, K.~G. Castro \emph{et~al.},
+  ``An outbreak of multidrug-resistant tuberculosis among hospitalized patients
+  with the acquired immunodeficiency syndrome,'' \emph{New England Journal of
+  Medicine}, vol. 326, no.~23, pp. 1514--1521, 1992.
+
+\bibitem{whitney2000increasing}
+C.~G. Whitney, M.~M. Farley, J.~Hadler, L.~H. Harrison, C.~Lexau, A.~Reingold,
+  L.~Lefkowitz, P.~R. Cieslak, M.~Cetron, E.~R. Zell \emph{et~al.},
+  ``Increasing prevalence of multidrug-resistant streptococcus pneumoniae in
+  the united states,'' \emph{New England Journal of Medicine}, vol. 343,
+  no.~26, pp. 1917--1924, 2000.
+
+\bibitem{milestones}
+``National targets and metrics,''
+  \url{https://health.gov/hcq/prevent-hai-measures.asp}, accessed: 2018-11-28.
+
+\bibitem{tenover2012antimicrobial}
+F.~C. Tenover, I.~A. Tickler, and D.~H. Persing, ``Antimicrobial resistant
+  strains of clostridium difficile from north america,'' \emph{Antimicrobial
+  agents and chemotherapy}, pp. AAC--00\,220, 2012.
+
+\bibitem{peng2017update}
+Z.~Peng, D.~Jin, H.~B. Kim, C.~W. Stratton, B.~Wu, Y.-W. Tang, and X.~Sun, ``An
+  update on antimicrobial resistance in clostridium difficile: Resistance
+  mechanisms and antimicrobial susceptibility testing,'' \emph{Journal of
+  clinical microbiology}, pp. JCM--02\,250, 2017.
+
+\bibitem{spigaglia2016recent}
+P.~Spigaglia, ``Recent advances in the understanding of antibiotic resistance
+  in clostridium difficile infection,'' \emph{Therapeutic advances in
+  infectious disease}, vol.~3, no.~1, pp. 23--42, 2016.
+
+\bibitem{wiens2012learning}
+J.~Wiens, J.~Guttag, and E.~Horvitz, ``Learning evolving patient risk processes
+  for c. diff colonization,'' in \emph{ICML Workshop on Machine Learning from
+  Clinical Data}, 2012.
+
+\bibitem{wiens2012patient}
+J.~Wiens, E.~Horvitz, and J.~V. Guttag, ``Patient risk stratification for
+  hospital-associated c. diff as a time-series classification task,'' in
+  \emph{Advances in Neural Information Processing Systems}, 2012, pp. 467--475.
+
+\bibitem{hartvigsen2018early}
+T.~Hartvigsen, C.~Sen, S.~Brownell, E.~Teeple, X.~Kong, and E.~A.
+  Rundensteiner, ``Early prediction of mrsa infections using electronic health
+  records.'' in \emph{HEALTHINF}, 2018, pp. 156--167.
+
+\bibitem{weiner2016antimicrobial}
+L.~M. Weiner, A.~K. Webb, B.~Limbago, M.~A. Dudeck, J.~Patel, A.~J. Kallen,
+  J.~R. Edwards, and D.~M. Sievert, ``Antimicrobial-resistant pathogens
+  associated with healthcare-associated infections: summary of data reported to
+  the national healthcare safety network at the centers for disease control and
+  prevention, 2011--2014,'' \emph{infection control \& hospital epidemiology},
+  vol.~37, no.~11, pp. 1288--1301, 2016.
+
+\bibitem{resistance}
+U.~D. of~Health, H.~Services \emph{et~al.}, ``Antibiotic resistance threats in
+  the united states, 2013,'' \emph{Centers for Disease Control and Prevention},
+  2013.
+
+\bibitem{ehr}
+``Health it and health information exchange basics,''
+  \url{https://www.healthit.gov/topic/health-it-basics/benefits-ehrs},
+  accessed: 2018-11-24.
+
+\bibitem{yadav2018mining}
+P.~Yadav, M.~Steinbach, V.~Kumar, and G.~Simon, ``Mining electronic health
+  records (ehrs): a survey,'' \emph{ACM Computing Surveys (CSUR)}, vol.~50,
+  no.~6, p.~85, 2018.
+
+\bibitem{rajkomar2018scalable}
+A.~Rajkomar, E.~Oren, K.~Chen, A.~M. Dai, N.~Hajaj, M.~Hardt, P.~J. Liu,
+  X.~Liu, J.~Marcus, M.~Sun \emph{et~al.}, ``Scalable and accurate deep
+  learning with electronic health records,'' \emph{npj Digital Medicine},
+  vol.~1, no.~1, p.~18, 2018.
+
+\bibitem{shickel2018deep}
+B.~Shickel, P.~J. Tighe, A.~Bihorac, and P.~Rashidi, ``Deep ehr: A survey of
+  recent advances in deep learning techniques for electronic health record
+  (ehr) analysis,'' \emph{IEEE journal of biomedical and health informatics},
+  vol.~22, no.~5, pp. 1589--1604, 2018.
+
+\bibitem{kirby2016phekb}
+J.~C. Kirby, P.~Speltz, L.~V. Rasmussen, M.~Basford, O.~Gottesman, P.~L.
+  Peissig, J.~A. Pacheco, G.~Tromp, J.~Pathak, D.~S. Carrell \emph{et~al.},
+  ``Phekb: a catalog and workflow for creating electronic phenotype algorithms
+  for transportability,'' \emph{Journal of the American Medical Informatics
+  Association}, vol.~23, no.~6, pp. 1046--1052, 2016.
+
+\bibitem{shivade2013review}
+C.~Shivade, P.~Raghavan, E.~Fosler-Lussier, P.~J. Embi, N.~Elhadad, S.~B.
+  Johnson, and A.~M. Lai, ``A review of approaches to identifying patient
+  phenotype cohorts using electronic health records,'' \emph{Journal of the
+  American Medical Informatics Association}, vol.~21, no.~2, pp. 221--230,
+  2013.
+
+\bibitem{ng2014paramo}
+K.~Ng, A.~Ghoting, S.~R. Steinhubl, W.~F. Stewart, B.~Malin, and J.~Sun,
+  ``Paramo: a parallel predictive modeling platform for healthcare analytic
+  research using electronic health records,'' \emph{Journal of biomedical
+  informatics}, vol.~48, pp. 160--170, 2014.
+
+\bibitem{bitton2010framingham}
+A.~Bitton and T.~Gaziano, ``The framingham heart study's impact on global risk
+  assessment,'' \emph{Progress in cardiovascular diseases}, vol.~53, no.~1, pp.
+  68--78, 2010.
+
+\bibitem{levinson2010adverse}
+D.~R. Levinson and I.~General, ``Adverse events in hospitals: national
+  incidence among medicare beneficiaries,'' \emph{Department of Health and
+  Human Services Office of the Inspector General}, 2010.
+
+\bibitem{torio2006trends}
+C.~M. Torio, A.~Elixhauser, and R.~M. Andrews, ``Trends in potentially
+  preventable hospital admissions among adults and children, 2005--2010:
+  Statistical brief\# 151,'' 2006.
+
+\bibitem{progress}
+``National and state healthcare associated infectious: Progress report,''
+  \url{https://www.cdc.gov/HAI/pdfs/progress-report/hai-progress-report.pdf},
+  accessed: 2018-11-17.
+
+\bibitem{yokoe2014compendium}
+D.~S. Yokoe, D.~J. Anderson, S.~M. Berenholtz, D.~P. Calfee, E.~R. Dubberke,
+  K.~D. Eilingson, D.~N. Gerding, J.~P. Haas, K.~S. Kaye, M.~Klompas
+  \emph{et~al.}, ``A compendium of strategies to prevent healthcare-associated
+  infections in acute care hospitals: 2014 updates,'' \emph{Infection Control
+  \& Hospital Epidemiology}, vol.~35, no.~S2, pp. S21--S31, 2014.
+
+\bibitem{umscheid2011estimating}
+C.~A. Umscheid, M.~D. Mitchell, J.~A. Doshi, R.~Agarwal, K.~Williams, and P.~J.
+  Brennan, ``Estimating the proportion of healthcare-associated infections that
+  are reasonably preventable and the related mortality and costs,''
+  \emph{Infection Control \& Hospital Epidemiology}, vol.~32, no.~2, pp.
+  101--114, 2011.
+
+\bibitem{miller2011comparison}
+B.~A. Miller, L.~F. Chen, D.~J. Sexton, and D.~J. Anderson, ``Comparison of the
+  burdens of hospital-onset, healthcare facility-associated clostridium
+  difficile infection and of healthcare-associated infection due to
+  methicillin-resistant staphylococcus aureus in community hospitals,''
+  \emph{Infection Control \& Hospital Epidemiology}, vol.~32, no.~4, pp.
+  387--390, 2011.
+
+\bibitem{cdc}
+``Modeling infectious diseases in healthcare network (mind - healthcare),
+  center for disease control and prevention,''
+  \url{https://www.cdc.gov/hai/research/MIND-Healthcare.html}, accessed:
+  2018-11-17.
+
+\bibitem{scott2009direct}
+R.~D. Scott, ``The direct medical costs of healthcare-associated infections in
+  us hospitals and the benefits of prevention,'' 2009.
+
+\bibitem{klevens2007estimating}
+R.~M. Klevens, J.~R. Edwards, C.~L. Richards~Jr, T.~C. Horan, R.~P. Gaynes,
+  D.~A. Pollock, and D.~M. Cardo, ``Estimating health care-associated
+  infections and deaths in us hospitals, 2002,'' \emph{Public health reports},
+  vol. 122, no.~2, pp. 160--166, 2007.
+
+\bibitem{hhs}
+``National action plan to prevent healthcare-associated infections: roadmap to
+  elimination. washington, dc: Department of health and human services,''
+  \url{https://health.gov/hcq/prevent-hai.asp}, accessed: 2018-11-17.
+
+\bibitem{magill2014multistate}
+S.~S. Magill, J.~R. Edwards, W.~Bamberg, Z.~G. Beldavs, G.~Dumyati, M.~A.
+  Kainer, R.~Lynfield, M.~Maloney, L.~McAllister-Hollod, J.~Nadle
+  \emph{et~al.}, ``Multistate point-prevalence survey of health
+  care--associated infections,'' \emph{New England Journal of Medicine}, vol.
+  370, no.~13, pp. 1198--1208, 2014.
+
+\bibitem{stone2005economic}
+P.~W. Stone, E.~C. Hedblom, D.~M. Murphy, and S.~B. Miller, ``The economic
+  impact of infection control: making the business case for increased infection
+  control resources,'' \emph{American journal of infection control}, vol.~33,
+  no.~9, pp. 542--547, 2005.
+
+\bibitem{zimlichman2013health}
+E.~Zimlichman, D.~Henderson, O.~Tamir, C.~Franz, P.~Song, C.~K. Yamin,
+  C.~Keohane, C.~R. Denham, and D.~W. Bates, ``Health care--associated
+  infections: a meta-analysis of costs and financial impact on the us health
+  care system,'' \emph{JAMA internal medicine}, vol. 173, no.~22, pp.
+  2039--2046, 2013.
+
+\bibitem{center}
+``The center for disease dynamics, economics \& policy,''
+  \url{https://cddep.org/tool/overall_and_unit_costs_five_most_common_hospital_acquired_infections_hais_us/},
+  accessed: 2018-11-28.
+
+\bibitem{balkhair2014epidemiology}
+A.~Balkhair, Y.~M. Al-Farsi, Z.~Al-Muharrmi, R.~Al-Rashdi, M.~Al-Jabri,
+  F.~Neilson, S.~S. Al-Adawi, M.~El-Beeli, and S.~Al-Adawi, ``Epidemiology of
+  multi-drug resistant organisms in a teaching hospital in oman: a one-year
+  hospital-based study,'' \emph{The Scientific World Journal}, vol. 2014, 2014.
+
 \bibitem{siegel2007management}
 J.~D. Siegel, E.~Rhinehart, M.~Jackson, and L.~Chiarello, ``Management of
   multidrug-resistant organisms in health care settings, 2006,'' \emph{American
@@ -335,21 +393,20 @@ D.~M. Shlaes, D.~N. Gerding, J.~F. John~Jr, W.~A. Craig, D.~L. Bornstein, R.~A.
   hospitals,'' \emph{Clinical infectious diseases}, vol.~25, no.~3, pp.
   584--599, 1997.
 
+\bibitem{landers2012review}
+T.~F. Landers, B.~Cohen, T.~E. Wittum, and E.~L. Larson, ``A review of
+  antibiotic use in food animals: perspective, policy, and potential,''
+  \emph{Public health reports}, vol. 127, no.~1, pp. 4--22, 2012.
+
 \bibitem{wiens2014study}
 J.~Wiens, J.~Guttag, and E.~Horvitz, ``A study in transfer learning: leveraging
   data from multiple hospitals to enhance hospital-specific predictions,''
   \emph{Journal of the American Medical Informatics Association}, vol.~21,
   no.~4, pp. 699--706, 2014.
 
-\bibitem{tenover2012antimicrobial}
-F.~C. Tenover, I.~A. Tickler, and D.~H. Persing, ``Antimicrobial resistant
-  strains of clostridium difficile from north america,'' \emph{Antimicrobial
-  agents and chemotherapy}, pp. AAC--00\,220, 2012.
-
-\bibitem{spigaglia2016recent}
-P.~Spigaglia, ``Recent advances in the understanding of antibiotic resistance
-  in clostridium difficile infection,'' \emph{Therapeutic advances in
-  infectious disease}, vol.~3, no.~1, pp. 23--42, 2016.
+\bibitem{amr}
+``Antibiotic/antimicrobial resistant,''
+  \url{https://www.cdc.gov/drugresistance/about.html}, accessed: 2018-11-24.
 
 \bibitem{cdimdro}
 ``Surveillance for c. difficile, mrsa, and other drug-resistant infections,''

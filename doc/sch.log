@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.11.15)  26 NOV 2018 14:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.11.15)  29 NOV 2018 09:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -227,6 +227,30 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \titlewidthlast=\dimen120
 \titlewidthfirst=\dimen121
 ))
+(c:/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(c:/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(c:/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen122
+\captionmargin@=\dimen123
+\captionwidth=\dimen124
+\caption@tempdima=\dimen125
+\caption@indent=\dimen126
+\caption@parindent=\dimen127
+\caption@hangindent=\dimen128
+)
+\c@caption@flags=\count106
+\c@ContinuedFloat=\count107
+Package caption Info: hyperref package is loaded.
+)
+\c@subfigure=\count108
+\c@subtable=\count109
+)
 
 LaTeX Warning: Unused global option(s):
     [timesnewroman].
@@ -300,7 +324,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count106
+\c@section@level=\count110
 )
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
@@ -313,16 +337,16 @@ LaTeX Info: Redefining \nameref on input line 7.
 
 (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
-\scratchdimen=\dimen122
+\scratchcounter=\count111
+\scratchdimen=\dimen129
 \scratchbox=\box28
-\nofMPsegments=\count108
-\nofMParguments=\count109
+\nofMPsegments=\count112
+\nofMParguments=\count113
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count110
-\MPscratchDim=\dimen123
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
+\MPscratchCnt=\count114
+\MPscratchDim=\dimen130
+\MPnumerator=\count115
+\makeMPintoPDFobject=\count116
 \everyMPtoPDFconversion=\toks18
 ) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -340,6 +364,8 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -356,61 +382,100 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./sections/1de
 scription.tex [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 41.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 45.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 45.
-
-Overfull \hbox (8.0551pt too wide) in paragraph at lines 45--60
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--60
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 74.
 (c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
  [2]
-Overfull \hbox (3.58975pt too wide) in paragraph at lines 101--102
+
+pdfTeX warning: pdflatex.exe (file ./img/bar.pdf): PDF inclusion: found PDF ver
+sion <1.6>, but at most version <1.5> allowed
+<./img/bar.pdf, id=200, 303.76787pt x 241.52634pt>
+File: ./img/bar.pdf Graphic file (type pdf)
+<use ./img/bar.pdf>
+Package pdftex.def Info: ./img/bar.pdf  used on input line 69.
+(pdftex.def)             Requested size: 140.92793pt x 112.0506pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/pie.pdf): PDF inclusion: found PDF ver
+sion <1.6>, but at most version <1.5> allowed
+<./img/pie.pdf, id=201, 270.61803pt x 271.97107pt>
+File: ./img/pie.pdf Graphic file (type pdf)
+<use ./img/pie.pdf>
+Package pdftex.def Info: ./img/pie.pdf  used on input line 73.
+(pdftex.def)             Requested size: 140.92793pt x 141.63326pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/evol.pdf): PDF inclusion: found PDF ve
+rsion <1.6>, but at most version <1.5> allowed
+<./img/evol.pdf, id=206, 561.71588pt x 176.40706pt>
+File: ./img/evol.pdf Graphic file (type pdf)
+<use ./img/evol.pdf>
+Package pdftex.def Info: ./img/evol.pdf  used on input line 82.
+(pdftex.def)             Requested size: 328.82707pt x 103.27173pt.
+[3 <./img/bar.pdf, page is rotated 90 degrees> <./img/pie.pdf, page is rotated 
+90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file ./img/resistant.pdf): PDF inclusion: found P
+DF version <1.6>, but at most version <1.5> allowed
+<./img/resistant.pdf, id=264, 580.78682pt x 412.59445pt>
+File: ./img/resistant.pdf Graphic file (type pdf)
+<use ./img/resistant.pdf>
+Package pdftex.def Info: ./img/resistant.pdf  used on input line 102.
+(pdftex.def)             Requested size: 328.82707pt x 233.60106pt.
+[4 <./img/evol.pdf> <./img/resistant.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 118.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 122.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 122.
+
+Overfull \hbox (8.0551pt too wide) in paragraph at lines 122--137
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--137
+
+ []
+
+
+Overfull \hbox (3.58975pt too wide) in paragraph at lines 148--149
 []$[]$ \OT1/cmr/m/n/10.95 Methicillin-resistant Staphy-lo-coc-cus au-
  []
 
-[3] [4] (./sections/approach.tex [5]
+[5] [6] [7] (./sections/approach.tex
 Overfull \hbox (7.27509pt too wide) in paragraph at lines 5--6
 []\OT1/cmr/m/n/10.95 For pa-tient spe-cific pre-dic-tion, con-sider/contrast wi
 th \OT1/cmr/m/it/10.95 Cox pro-por-tional haz-ards model \OT1/cmr/m/n/10.95 (CP
 HM),
  []
 
-)) [6] [7] (./sch.bbl
-Underfull \hbox (badness 2237) in paragraph at lines 25--28
+[8])) [9] (./sch.bbl [1] [2]
+Underfull \hbox (badness 2237) in paragraph at lines 242--245
 []\OT1/cmr/m/n/10.95 ``Health it and health in-for-ma-tion ex-change ba-sics,''
  [][]$https : / / www . healthit . gov / topic /
  []
 
-[1]
-Underfull \hbox (badness 1348) in paragraph at lines 166--168
+[3] [4]
+Underfull \hbox (badness 1348) in paragraph at lines 408--410
 []\OT1/cmr/m/n/10.95 ``Antibiotic/antimicrobial re-sis-tant,'' [][]$https : / /
  www . cdc . gov / drugresistance / about . html$[][], ac-
  []
 
-[2] [3] [4]
-Underfull \hbox (badness 3039) in paragraph at lines 360--363
+[5]
+Underfull \hbox (badness 3039) in paragraph at lines 417--420
 []\OT1/cmr/m/n/10.95 ``Gram-negative bac-te-ria in-fec-tions in health-care set
 -tings,'' [][]$https : / / www . cdc . gov / hai /
  []
 
-) [5] (./sections/2bio.tex) (./sections/3budget.tex) [1]
+) [6] (./sections/2bio.tex) (./sections/3budget.tex) [1]
 (./sections/4support.tex) [1] (./sections/5resources.tex) [1]
 (./sections/6data.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
@@ -424,13 +489,13 @@ Package rerunfilecheck Info: File `sch.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
- 6357 strings out of 492639
- 93063 string characters out of 6133102
- 196795 words of memory out of 5000000
- 10071 multiletter control sequences out of 15000+600000
+ 7541 strings out of 492639
+ 114477 string characters out of 6133102
+ 219540 words of memory out of 5000000
+ 11226 multiletter control sequences out of 15000+600000
  10078 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,11n,45p,1337b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,12n,46p,1989b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2018/texmf-dis
@@ -438,10 +503,10 @@ t/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb>
-Output written on sch.pdf (17 pages, 173382 bytes).
+Output written on sch.pdf (20 pages, 470355 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 329 compressed objects within 4 object streams
- 96 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 820 PDF objects out of 1000 (max. 8388607)
+ 728 compressed objects within 8 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -8,11 +8,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: sch18.bib
-I was expecting a `,' or a `}'---line 1007 of file sch18.bib
- :   
- :   year = {2013}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -20,45 +15,45 @@ Warning--empty journal in torio2006trends
 Warning--empty journal in scott2009direct
 
 Done.
-You've used 57 entries,
+You've used 67 entries,
             4087 wiz_defined-function locations,
-            1130 strings with 21906 characters,
-and the built_in function-call counts, 46368 in all, are:
-= -- 3682
-> -- 1392
-< -- 398
-+ -- 753
-- -- 270
-* -- 2255
-:= -- 6702
-add.period$ -- 115
-call.type$ -- 57
-change.case$ -- 65
-chr.to.int$ -- 870
-cite$ -- 59
-duplicate$ -- 3317
-empty$ -- 3431
-format.name$ -- 309
-if$ -- 10796
+            1184 strings with 24333 characters,
+and the built_in function-call counts, 55049 in all, are:
+= -- 4373
+> -- 1676
+< -- 469
++ -- 905
+- -- 327
+* -- 2681
+:= -- 7950
+add.period$ -- 136
+call.type$ -- 67
+change.case$ -- 76
+chr.to.int$ -- 1017
+cite$ -- 69
+duplicate$ -- 3943
+empty$ -- 4063
+format.name$ -- 375
+if$ -- 12826
 int.to.chr$ -- 0
-int.to.str$ -- 57
-missing$ -- 637
-newline$ -- 194
-num.names$ -- 48
-pop$ -- 1492
+int.to.str$ -- 67
+missing$ -- 761
+newline$ -- 224
+num.names$ -- 57
+pop$ -- 1775
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 3520
+skip$ -- 4181
 stack$ -- 0
-substring$ -- 2142
-swap$ -- 2811
-text.length$ -- 108
+substring$ -- 2510
+swap$ -- 3347
+text.length$ -- 130
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 57
+type$ -- 67
 warning$ -- 2
-while$ -- 189
-width$ -- 59
-write$ -- 573
-(There was 1 error message)
+while$ -- 224
+width$ -- 69
+write$ -- 674
+(There were 2 warnings)

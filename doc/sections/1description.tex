@@ -1,15 +1,88 @@
 \section{Project Description}
 \subsection{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EHR/HAI/MDRO/what has been done and what needs to be done. 
+% Part I of contribution: multi output prediction.
+With the ever-growing availability of the \emph{Electronic Health Records} (EHR), many data scientists and health-informaticians have been presented with an unprecedented opportunity to improve the healthcare system by providing evidence-based solutions.  One of the costly, life-threatening but preventable problems of the healthcare system is \emph{Healthcare-Associated Infections} (HAI) which are those infections that a patient get while receiving treatment for another disease. HAIs are categorize broadly into two categories of device-associated infections (DAI) or Surgical-Site Infections (SSI). The threat of HAIs has been amplified by the recent rise of \emph{Multi-Drug Resistance Organisms} (MDRO) which makes the treatment options of the affected patients very limited. HAIs caused by MDROs are claiming tens of thousands lives every year and burden the U.S. healthcare system with around 10 billion dollars. Although there has been a lot of work for predicting the risk of each type of HAIs individually  \cite{mu2011improving, de2006surgical, friedman2007alternative, chiang2014risk, wylie2010risk, noaman2017improving, schoonover2017accurately, herc2017model, parreco2018predicting, grana2015detection, tambyah2004catheter, siddiq2012new, froon1998prediction, larsson2017risk, lisboa2008ventilator, kruger2011prognosis, mirsaeidi2009predicting} or more prevalent pathogens like Clostridium difficile (CDI) bacteria \cite{wiens2014learning, sen2017crest, oh2018generalizable, labarbera2015prediction, dubberke2011development, kuntz2016predicting}, there has been no effort in addressing the less common infections because of their scarcity. In this work, we propose to harness the recent advances in machine learning literature, specifically multi-task learning, multi-label prediction, and multi-target regression to holistically assess the patients' risk for many life-threatening MDRO-caused infections.
+
+% Part II of contribution: hierarchy of tasks. 
+Another motivation behind our proposed work stems from the fact that the severity and extent of MDRO-caused HAIs are vastly depends on the facility and the population of patients in that facilities. For example, risk prediction models developed using a dataset  from an intensive care units (ICU) can not be used directly to predict the risk of HAIs for patients in long-term care facilities. Also, since we are dealing with extremely rare events, it is not feasible to collect representative data from each facility or small care unit and develop their own predictive models from scratch. For example, although CDI cause 500,000 infections per year in U.S. hospitals, its prevalence is less than 10 percent, which leaves a 200 beds hospital with too few positive samples to build its own model for CDI risk prediction. We propose a multi-task learning framework with a tree structure task hierarchy to model the different facilities inside the hospital and to better predict the risk of various HAIs by leveraging the common and individual risk factors of patients hospitalized in different units or facilities. Furthermore, we will develop transfer learning methods for predicting risk of HAIs where patients features are not exactly equal in different facilities. 
+
+% Part III of contribution: decision support for picking relevant intervention.
+Creating risk scores and determining the risk factors for different HAIs is the limit of current risk prediction models. We want to move one step further and provide the clinicians with an ordered list of possible interventions which takes into account convenience of the patient and his/her family along with the financial cost of preventative interventions for the whole healthcare system.  {\color{red} TODO: need to expand this based on John and Courtney's inputs.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% General goal beyond this dataset then more specific about this data set. 
+{\bf Goal:} Our long term goal is to systematically develop prediction models which exploit data collected from multiple (heterogeneous) sources to predict different (but related) extremely rare outcomes while taking into accounts the relation between data sources and also outcomes to improve prediction accuracy of all outcomes. In this project, we plan to investigate such models toward accurate risk prediction of various extremely rare MDRO-caused HAI, in order to provide clinicians with evidence-based list of possible intervention options. The work will focus on \emph{enriching} risk prediction models with hierarchical side information about the relation of different tasks (multiple hospitals and units therein) as well as grouping of different types of HAIs (device-associated or SSI and sub-groups therein). We also build on top of the recent success of multi-label prediction and multi-target regression methods advanced by the machine learning community to simultaneously predict both the risk of developing multiple MDRO-caused HAI and also time to infections. Such predictive model will elevate our ability to better understand the risk factors involved in any of the HAIs, paving the way for accurate suggestion of preventative interventions to clinical practitioners.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% What do we propose specifically? Who are working on this? What is the data set? 
+{\bf Specific Objectives:} Working with a multi-disciplinary team including computer scientists, (machine learning, data mining), bioinformaticians, economists, and infectious diseases specialist, we will use the three years data of all patients admitted to the Ohio State University (OSU) hospitals which has been collected as a part of the infectious disease Learning Laboratory (LL) project ({\color{red}link to the website and; letter of support from Susan Moffatt-Bruce at the OSU hospital attached}) to develop a Machine Learning (ML) system, called DEALER, that systematically uses the extremely rare HAI-causing MDROs incidents in the pooled data from multiple hospitals and units therein, and accurately predict the temporal risk of a patient developing any of the MDRO infections during their stay at a hospital. We hypothesize that enriching our samples by merging various heterogeneous source of data along with simultaneous prediction of multiple related outcomes will both improve the prediction accuracy of all adverse events and also provides more interpretable models. In particular, our long term goal is to integrate DEALER into the OSU's patient safety learning lab called IDEA4PS whose primary goal is to improve workflows and information transfers in the healthcare environment in order to enhance patients' outcomes. Advances in both computational and statistical aspects of data analysis to be pursued in the project will be key to translating the IDEA4PS dataset into a humna-in-the-loop system that reduces adverse health events. 
+
+%Beyond benefiting from enriched heterogeneous MDROs-caused incidents, DEALER also furthers its performance by taking into account hierarchy of hospitals, units, and wards along with their relationship with each other.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% What will be our contribution?
+The ML system that we envision is a framework for surveillance of ``hot spots'' of HAIs which exploits electronic medical records and provides real-time risk prediction and recognizes concerning trends sooner so that clinicians can implement timely and effective interventions. Our project is motivated by a strong desire to develop methods and systems to mitigate the threat of MDROs-caused HAIs in healthcare systems. To this end, we anticipate that this project will produce the following:
+\begin{itemize}
+	\item It will enable accurate and timely identification of patients with high risk of developing multiple types of HAIs and provides practitioners with interpretable decisions. 
+	\item It will provide smaller healthcare institutes methods to tailor mathematical HAI's risk prediction models developed for larger institutes for their environment. 
+	\item It will assist clinicians in selecting proper preventative intervention which factors in patients preferences along with healthcare costs. 
+\end{itemize}
+
+%MDROs are rising (stat and image), HAI cost and death, 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% What has been done? What can be done to improve? 
+{\bf Significance:} The United States has made significant progress toward the collective goal of eliminating HAIs, and as a result, healthcare in the U.S. is safer now than it was even 10 years ago. Building upon this success and continuing towards the elimination of HAIs is critical \cite{actionplan}. With the rise of MDROs in U.S. \cite{pop2005rising,edlin1992outbreak, whitney2000increasing} and the CDC's goal of substantially reducing multiple types of HAIs by 2020 \cite{milestones}, addressing MDROs-causing HAIs is of extreme value.  
+
+There has been focused studies to predict patients' risk of developing infection due to the more frequent MDROs using EHRs. Clostridioides difficile (C. diff.), the most prevalent cause of HAI which sometimes become drug-resistant \cite{tenover2012antimicrobial, peng2017update, spigaglia2016recent}, has been extensively studied \cite{oh2018generalizable, wiens2012learning, wiens2014learning, wiens2012patient}.  Methicillin-resistant Staphylococcus aureus (MRSA) is the second most frequent pathogen whose risk prediction from EHR has been recently studied in isolation \cite{hartvigsen2018early}. Due to the scarcity of HAIs associated with other MDROs, comprehensive analysis of risk factors and risk stratification of patients for them remained unexplored. Since the distribution of frequent pathogens and their resistance pattern are changing \cite{weiner2016antimicrobial} and many of the extremely rare MDROs are more fatal than their rare counterparts \cite{resistance}, comprehensive investigation of all HAIs caused by MDROs is of extreme significance. 
+
+%(e.g., healthcare-associated exposure, age, underlying disease, etc.), HAIs
+%continue to be a signicant problem throughout the world (Klevens et al., 2007). In recent
+%years there have been numerous articles citing our inability to prevent HAIs (Miller et al.,
+%2011; Umscheid et al., 2011; Sievert et al., 2013).
+
+
+%providing the ability to track adverse events longitudinally over the spectrum of a particular
+%patient’s receipt of health services. More research on the use of electronic data for
+%surveillance of HAIs is needed.
+
+
+% Define terminology, data type in detail
+\subsection{Scientific Background and Data Sources}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % What is EHR? What types of problems have been addressed? 
-One of the key initiatives of the US government to decrease cost and improve healthcare quality is the mandating of health care providers to implement electronic health record (EHR) systems \cite{ehr}. EHRs are real-time, patient-centered records that make information such as demographics, medications, laboratory test results, diagnosis codes, and procedures, available instantly and securely to authorized users. While the primary goal of an EHR system is electronic documentation of patients’ care, the collected data is often serve as an input source for many clinical informatics applications with the goal of extracting actionable information to improve diagnostics and patients outcomes \cite{yadav2018mining, rajkomar2018scalable, shickel2018deep}. Some of the tasks that EHR has been successfully used for include cohort identification \cite{kirby2016phekb, shivade2013review}, risk prediction \cite{ng2014paramo, wiens2012patient}, biomarker discovery \cite{bitton2010framingham}, and adverse event detection \cite{levinson2010adverse, torio2006trends}. Broadly, an adverse event is a detrimental effect of patient health as a result of medical care. The goal of our proposed work is to predict a specific adverse event, namely namely rare infections using EHR. 
+One of the key initiatives of the US government to decrease cost and improve healthcare quality is the mandating of health care providers to implement Electronic Health Record (EHR) systems \cite{ehr}. EHRs are real-time, patient-centered records that make information such as demographics, medications, laboratory test results, diagnosis codes, and procedures, available instantly and securely to authorized users. While the primary goal of an EHR system is electronic documentation of patients’ care, the collected data is often serve as an input source for many clinical informatics applications with the goal of extracting actionable information to improve diagnostics and patients outcomes \cite{yadav2018mining, rajkomar2018scalable, shickel2018deep}. Some of the tasks that EHR has been successfully used for include cohort identification \cite{kirby2016phekb, shivade2013review}, risk prediction \cite{ng2014paramo, wiens2012patient}, biomarker discovery \cite{bitton2010framingham}, and adverse event detection \cite{levinson2010adverse, torio2006trends}. Broadly, an adverse event is a detrimental effect of patient health as a result of medical care. The goal of our proposed work is to predict a specific adverse event, namely rare infections using EHR. 
 
 %, intervention's effect quantification
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % What is HAI? Why is it important to address?(Cost and Occurrence)
-\emph{Hospital-Acquired Infection} (HAI) or more broadly healthcare-associated infection is an infection a person get while he/she is receiving health care for another condition. Although often being preventable \cite{progress, yokoe2014compendium, umscheid2011estimating}, HAIs have been the cause of many diseases and deaths among hospitalized patients \cite{miller2011comparison, cdc, scott2009direct, klevens2007estimating} and their elimination is a priority of the Department of Health and Human Services \cite{hhs}. It is estimated that at any given time, about 1 in 25 inpatients have HAI \cite{magill2014multistate, hhs}. Other studies report the estimated number of HAI associated death to be almost 99000 per year \cite{klevens2007estimating} while burdening the U.S. healthcare budget by \$5 to \$10 billion annually \cite{stone2005economic, zimlichman2013health}. 
+\emph{Hospital-Acquired Infection} (HAI) or more broadly healthcare-associated infection is an infection a person get while he/she is receiving health care for another condition. Although often being preventable \cite{progress, yokoe2014compendium, umscheid2011estimating}, HAIs have been the cause of many diseases and deaths among hospitalized patients \cite{miller2011comparison, cdc, scott2009direct, klevens2007estimating} and their elimination is a priority of the Department of Health and Human Services \cite{hhs}. It is estimated that at any given time, about 1 in 25 inpatients have HAI \cite{magill2014multistate, hhs}. Other studies report the estimated number of HAI associated death to be around 99000 per year \cite{klevens2007estimating} while burdening the U.S. healthcare budget by \$5 to \$10 billion annually \cite{stone2005economic, zimlichman2013health}, Figure \ref{money}. 
+
+\begin{figure}
+	\centering
+	\subcaptionbox{
+		Per case cost.
+		\label{bar}
+	}{\includegraphics[width=0.30 \textwidth,]{./img/bar}}~
+	\subcaptionbox{
+		Contribution percentage.
+		\label{pie}
+	}{\includegraphics[width=0.30 \textwidth]{./img/pie}}
+	\caption{Cost of the five most common HAIs in the U.S. reaches the total of \$9.8 billion annually. Data source from \cite{zimlichman2013health} and figures from \cite{center}}.
+	\label{money}
+\end{figure}
+
 %Approximately one-third of HAIs are preventable \cite{}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.7\textwidth]{./img/evol.pdf}
+	\caption{Antibiotic resistance as an outcome of antibiotic overuse and natural selection \cite{resistance}.}
+	\label{evol}
+\end{figure}
 
 
 
@@ -18,64 +91,22 @@ One of the key initiatives of the US government to decrease cost and improve hea
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % What are MDROs? Why are they important?
-Though the rate of many HAI types have dropped over the last decade \cite{progress} increasing trends in prevalence rates of HAIs caused by \emph{Multi-Drug Resistant Organisms} (MDRO) has been observed \cite{balkhair2014epidemiology, actionplan}. MDROs are pathogens that have developed the ability to defeat many of the known antibiotics, and therefore infections caused by MDROs are difficult or sometimes impossible to treat. In most cases, antibiotic-resistant infections require extended hospital stays, additional follow-up doctor visits, and costly toxic alternatives \cite{amr, resistance}. In 2013, the Centers for Disease Control and Prevention (CDC) published a threat report outlining the top eighteen drug-resistant threats to the U.S. eight of which are healthcare associated with more than 600,000 total occurrences and around 30000 death per year \cite{resistance}. 
+Though the rate of many HAI types have dropped over the last decade \cite{progress} increasing trends in prevalence rates of HAIs caused by \emph{Multi-Drug Resistant Organisms} (MDRO) has been observed \cite{balkhair2014epidemiology, actionplan}. MDROs are pathogens, predominantly bacteria, that have the ability to defeat many of the known antibiotics, and therefore infections caused by MDROs are difficult or sometimes impossible to treat \cite{siegel2007management}. The prevention and control of MDROs is a national priority \cite{lederberg1998antimicrobial, shlaes1997society}. MDROs may naturally exists in the population of bacteria like gut microbiom without any adverse health effect, but when antibiotics kill other types of organisms in the population, MDROs take over all of the resources and produce offsprings that results in a generation of organisms all resistant to antibiotics. Finally, MDROs may amplify their presence in a population by pass their resistant-causing genetic materials to other bacteria \cite{resistance}. The process of MDRO growth due to the evolutionary pressure is depicted in Figure \ref{evol}.
 
-%A study found that 16\% of all HAIs are caused by MDROs \cite{hidron2008antimicrobial}.
+%{\bf Multi-drug resistant organism (MDRO) infection:} An infection caused by a microorganism, predominantly bacteria, that is resistant to multiple classes of antimicrobials. In some cases, the bacteria have become so resistant that no available antibiotics are effective against them. In most instances, MDRO infections have clinical manifestations that are similar to infections caused by susceptible pathogens. However, options for treating patients with these infections are often extremely limited 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% What has been done? What can be done to improve? 
-There has been focused studies to predict patients' risk of developing infection due to the more frequent MDROs using EHRs. Clostridioides difficile (C. diff.), the most prevalent cause of HAI which sometimes become drug-resistant \cite{peng2017update}, has been extensively studied \cite{oh2018generalizable, wiens2012learning, wiens2014learning, wiens2012patient}.  Methicillin-resistant Staphylococcus aureus (MRSA) is the second most frequent pathogen whose risk prediction from EHR has been recently studied in isolation \cite{hartvigsen2018early}. Due to the scarcity of HAIs associated with other MDROs, comprehensive analysis of risk factors and risk stratification of patients for them remained unexplored. Since the distribution of frequent pathogens and their resistance pattern are changing \cite{weiner2016antimicrobial} and many of the extremely rare MDROs are more fatal than their rare counterparts \cite{resistance}, comprehensive investigation of all HAIs caused by MDROs is of extreme significance. 
+Multi-drug resistance has been prevailed over the last decade due to overuse of antibiotics in different settings, e.g., food animal production \cite{landers2012review}. One of the main places that hosts most of MDROs are healthcare facilities, Figure \ref{resistant}. Although transmission of MDROs is most frequently documented in acute care facilities, all healthcare settings are affected by the emergence and transmission of antimicrobial-resistant microbes. It should be noted that, the severity and extent of disease caused by MDROs varies by the population(s) affected and by the institution(s) in which they are found. For example, risk of patients in institutions with varying physical and functional characteristics, like long-term care facilities, intensive care units (ICU), burn units, neonatal ICUs are varying a lot \cite{siegel2007management}. Therefore one can not build a risk prediction model for an MDRO using data from one population and transfer the built model to another facility and use it for another population of patients without suffering from prediction loss \cite{wiens2014study}. Because of this, any risk prediction model of these pathogens need to be tailored to the specific needs of each population and individual institution \cite{siegel2007management, wiens2014study}. 
 
-%(e.g., healthcare-associated exposure, age, underlying disease, etc.), HAIs
-%continue to be a signicant problem throughout the world (Klevens et al., 2007). In recent
-%years there have been numerous articles citing our inability to prevent HAIs (Miller et al.,
-%2011; Umscheid et al., 2011; Sievert et al., 2013).
+\begin{figure}
+	\centering
+	\includegraphics[width=.7\textwidth]{./img/resistant.pdf}
+	\caption{Animal food and healthcare system as sources of generating MDROs \cite{resistance}.}
+	\label{resistant}
+\end{figure}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% What do we propose?
-We propose the development of a Machine Learning (ML) system, called DEALER, that systematically uses the pooled data from multiple extremely rare HAI-causing MDROs and accurately predict the temporal risk of a patient developing any of the MDRO infections during their stay at hospitals. We hypothesize that enriching our samples by merging various heterogeneous source of data will both improve the prediction accuracy of all adverse events and also provides more interpretable models. In particular, our goal is to integrate DEALER into the Ohio State University's (OSU) patient safety learning lab called IDEA4PS whose primary goal is to improve workflows and information transfers in the healthcare environment in order to enhance patients' outcomes.
-
-The ML system that we envision is a framework for surveillance of ``hot spots'' of HAIs which exploits electronic medical records and provides real-time risk prediction and recognizes concerning trends sooner so that clinicians can implement timely and effective interventions. Beyond benefiting from enriched heterogeneous MDROs-caused incidents, DEALER also furthers its performance by taking into account hierarchy of hospitals, units, and wards along with their relationship with each other.
-
-\begin{table}[]
-	\caption{Table of Acronyms and their Descriptions}
-	\label{tab1}
-	{\footnotesize
-	\begin{tabular}{|l|l|r|l|}
-		\hline
-		\textbf{Name}              & \textbf{Description}                       & \multicolumn{1}{l|}{\textbf{Name}} & \textbf{Description}                               \\ \hline
-		\multicolumn{2}{|c|}{\textbf{General Terms}}                            & \multicolumn{2}{c|}{\textbf{Type of HAI}}                                               \\ \hline
-		\multicolumn{1}{|r|}{EHR}  & Electronic Health Record                   & CLABSI                             & Central Line-Associated Bloodstream Infection      \\ \hline
-		\multicolumn{1}{|r|}{CDC}  & Centers for Disease Control and Prevention & CAUTI                              & Catheter-Associated Urinary Tract Infections       \\ \hline
-		\multicolumn{1}{|r|}{NHSN} & National Healthcare Safety Network         & SSI                                & Surgical Site Infection                            \\ \hline
-		\multicolumn{1}{|r|}{HAI}  & Healthcare-Associated Infection             & VAP                                & Ventilator-Associated Pneumonia                    \\ \hline
-		\multicolumn{1}{|r|}{MDRO} & Multi-Drug Resistant Organism              & \multicolumn{2}{c|}{\textbf{Type of Pathogens}}                                         \\ \hline
-		\multicolumn{1}{|r|}{LabID}& Laboratory Identified Event        		& CDI                                & Clostridium difficile, C. diff.                    \\ \hline
-		\multicolumn{1}{|r|}{LL}   & Learning Laboratory                        & VRE                                & Vancomycin-resistant Enterococci                   \\ \hline
-		\multicolumn{1}{|r|}{TAP}  & Targeted Assessment for Prevention         & MRSA                               & Methicillin-resistant Staphylococcus aureus 	   \\ \hline
-		\multicolumn{1}{|r|}{SIR}  & Standardized Infection Ratio               & GNB                                & Gram-negative Bacteria                             \\ \hline
-	\end{tabular}
-	}
-\end{table}
-
-
-
-
-%providing the ability to track adverse events longitudinally over the spectrum of a particular
-%patient’s receipt of health services. More research on the use of electronic data for
-%surveillance of HAIs is needed.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% What will be our contribution?
-Our project is motivated by a strong desire to develop methods and systems to mitigate the threat of MDROs-caused HAIs in healthcare systems. To this end, we anticipate that this project will produce the following:
-\begin{itemize}
-	\item 
-\end{itemize}
-
-% Define terminology, data type in detail
-\subsection{Scientific Background and Data Sources}
-In previous section we briefly introduced the HAI prediction problem caused by rare MDROs and discussed its importance. To dive into more scientific details of HAI and also elaborating our data source, in this section, we first introduce the required terminology and then present our dataset. For conveniance Table \ref{tab1} summarizes all of the acronyms and their description. 
+%In previous section we briefly introduced the HAI prediction problem caused by rare MDROs and discussed its importance. 
+ %A study found that 16\% of all HAIs are caused by MDROs \cite{hidron2008antimicrobial}.
+In most cases, antibiotic-resistant infections require extended hospital stays, additional follow-up doctor visits, and costly toxic alternatives \cite{amr, resistance}. In 2013, the Centers for Disease Control and Prevention (CDC) published a threat report outlining the top eighteen drug-resistant threats to the U.S. eight of which are healthcare associated with more than 600,000 total occurrences and around 30000 death per year \cite{resistance}. To dive into more scientific details of HAI and also elaborating our data source, in the following, we first introduce the required terminology and then present our dataset. For conveniance Table \ref{tab1} summarizes all of the acronyms and their description. 
 
 % We want to show that they are not studied together. 
 {\bf Types of HAI:}
@@ -83,12 +114,28 @@ HAIs are categorize by CDC into two broad categories of device-associated infect
 
 To fully harness the power of data, we suggest to study \emph{all} of different types of HAIs together while incorporating the relation of different prediction task in our model. We hypothesized that for a specific infection-causing pathogen, all of the HAIs may share similar risk factors and at the same time each one should have its dedicated important risk factor. We suggest to model the risk of an HAI as a multi-task learning where task are hierarchically related. For example, all HAIs are divided to DAIs and SSIs while DAIs are divided to subtasks based on the relevant device and SSIs are divided based on the place of surgery. Thus, we enrich our dataset by considering are HIAs together and we are capturing shared and individual per-task risk factors at the same time. 
 
-
-{\bf Multi-drug resistant organism (MDRO) infection:} An infection caused by a microorganism, predominantly bacteria, that is resistant to multiple classes of antimicrobials. In some cases, the bacteria have become so resistant that no available antibiotics are effective against them. In most instances, MDRO infections have clinical manifestations that are similar to infections caused by susceptible pathogens. However, options for treating patients with these infections are often extremely limited \cite{siegel2007management}. The prevention and control of MDROs is a national priority \cite{lederberg1998antimicrobial, shlaes1997society}.
-
-Although transmission of MDROs is most frequently documented in acute care facilities, all healthcare settings are affected by the emergence and transmission of antimicrobial-resistant microbes. It should be noted that, the severity and extent of disease caused by MDROs varies by the population(s) affected and by the institution(s) in which they are found. For example, risk of patients in institutions with varying physical and functional characteristics, like long-term care facilities, intensive care units (ICU), burn units, neonatal ICUs are varying a lot \cite{siegel2007management}. Therefore one can not build a risk prediction model for an MDRO using data from one population and transfer the built model to another facility and use it for another population of patients without suffering from prediction loss \cite{wiens2014study}. Because of this, any risk prediction model of these pathogens need to be tailored to the specific needs of each population and individual institution \cite{siegel2007management, wiens2014study}. 
-
 %Recent studies show reductions in CLABSI incidents due to the advancement in preventative activities while SSI and CAUTI have not experienced the same trend. Different types of HAI can be caused by various organism. 
+\begin{table}[]
+	\caption{Table of Acronyms and their Descriptions}
+	\label{tab1}
+	{\footnotesize
+		\begin{tabular}{|l|l|r|l|}
+			\hline
+			\textbf{Name}              & \textbf{Description}                       & \multicolumn{1}{l|}{\textbf{Name}} & \textbf{Description}                               \\ \hline
+			\multicolumn{2}{|c|}{\textbf{General Terms}}                            & \multicolumn{2}{c|}{\textbf{Type of HAI}}                                               \\ \hline
+			\multicolumn{1}{|r|}{EHR}  & Electronic Health Record                   & CLABSI                             & Central Line-Associated Bloodstream Infection      \\ \hline
+			\multicolumn{1}{|r|}{CDC}  & Centers for Disease Control and Prevention & CAUTI                              & Catheter-Associated Urinary Tract Infections       \\ \hline
+			\multicolumn{1}{|r|}{NHSN} & National Healthcare Safety Network         & SSI                                & Surgical Site Infection                            \\ \hline
+			\multicolumn{1}{|r|}{HAI}  & Healthcare-Associated Infection             & VAP                                & Ventilator-Associated Pneumonia                    \\ \hline
+			\multicolumn{1}{|r|}{MDRO} & Multi-Drug Resistant Organism              & \multicolumn{2}{c|}{\textbf{Type of Pathogens}}                                         \\ \hline
+			\multicolumn{1}{|r|}{LabID}& Laboratory Identified Event        		& CDI                                & Clostridium difficile, C. diff.                    \\ \hline
+			\multicolumn{1}{|r|}{LL}   & Learning Laboratory                        & VRE                                & Vancomycin-resistant Enterococci                   \\ \hline
+			\multicolumn{1}{|r|}{TAP}  & Targeted Assessment for Prevention         & MRSA                               & Methicillin-resistant Staphylococcus aureus 	   \\ \hline
+			\multicolumn{1}{|r|}{SIR}  & Standardized Infection Ratio               & GNB                                & Gram-negative Bacteria                             \\ \hline
+		\end{tabular}
+	}
+\end{table}
+
 
 % We provide evidence that they are not examined collectively and more importantly risk prediction is missing for some of them. 
 {\bf Types of Pathogens:}
@@ -102,9 +149,17 @@ A perpendicular categorization of HAIs is based on the pathogen causing the infe
 	\item \underline{Vancomycin-resistant Enterococcus (VRE):} Enterococci cause a range of illnesses, mostly among patients receiving healthcare. Vancomycin-resistant Enterococci are specific types of antimicrobial-resistant bacteria that are resistant to vancomycin, the drug often used to treat infections caused by enterococci. Enterococci are bacteria that are typically present in the human intestines and in the female genital tract and are often found in the environment. Vancomycin-resistant Enterococci infections is considered a serious threat with the death toll of 1300 per year \cite{resistance}.
 	\item \underline{Gram-Negative Bacteria (GNB):} GNB is a group of pathogens cause infections including pneumonia, bloodstream infections, wound or SSI, and meningitis in healthcare settings. GNB are resistant to multiple drugs and are increasingly resistant to most available antibiotics. These bacteria have built-in abilities to find new ways to be resistant and can pass along genetic materials that allow other bacteria to become drug-resistant as well \cite{resistance}. Gram-negative infections include those caused by Klebsiella, Acinetobacter, Pseudomonas aeruginosa, and E. coli., as well as many other less common bacteria \cite{gnb}.  
 \end{itemize}
+
+
+
+
+
+
 There have been many model developed ... 
 
 %{\bf Antimicrobial resistance} The result of bacteria changing in ways that reduce or eliminate the effectiveness of drugs, chemicals, or other agents used to cure or prevent infections. Antibiotic resistance is one type of antimicrobial resistance.
+
+NHSN: The National Healthcare Safety Network, of the Centers for Disease Control and Prevention (CDC), is the nation’s most widely used health care-associated infection tracking system. Since 2009, infection data has been reported to the NHSN to track the national progress of the reduction of HAIs.
   
 
 {\bf Laboratory identified (LabID) Event:} For reporting to the National Healthcare Safety Network; an infection is considered laboratory
