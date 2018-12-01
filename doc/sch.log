@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.11.15)  29 NOV 2018 09:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.11.15)  1 DEC 2018 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -378,10 +378,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 8.
-) [1
+ [1
 
-{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./sections/1de
-scription.tex [1]
+{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) [2] (./section
+s/1description.tex [1]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
 
 (c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
@@ -389,75 +389,81 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
- [2]
-
-pdfTeX warning: pdflatex.exe (file ./img/bar.pdf): PDF inclusion: found PDF ver
-sion <1.6>, but at most version <1.5> allowed
-<./img/bar.pdf, id=200, 303.76787pt x 241.52634pt>
-File: ./img/bar.pdf Graphic file (type pdf)
-<use ./img/bar.pdf>
-Package pdftex.def Info: ./img/bar.pdf  used on input line 69.
-(pdftex.def)             Requested size: 140.92793pt x 112.0506pt.
 
 
-pdfTeX warning: pdflatex.exe (file ./img/pie.pdf): PDF inclusion: found PDF ver
-sion <1.6>, but at most version <1.5> allowed
-<./img/pie.pdf, id=201, 270.61803pt x 271.97107pt>
-File: ./img/pie.pdf Graphic file (type pdf)
-<use ./img/pie.pdf>
-Package pdftex.def Info: ./img/pie.pdf  used on input line 73.
-(pdftex.def)             Requested size: 140.92793pt x 141.63326pt.
+LaTeX Warning: Citation `robicsek2011electronic' on page D--2 undefined on inpu
+t line 38.
+
+[2]
+
+pdfTeX warning: pdflatex.exe (file ./img/bar1.pdf): PDF inclusion: found PDF ve
+rsion <1.6>, but at most version <1.5> allowed
+<./img/bar1.pdf, id=216, 526.35146pt x 344.36154pt>
+File: ./img/bar1.pdf Graphic file (type pdf)
+<use ./img/bar1.pdf>
+Package pdftex.def Info: ./img/bar1.pdf  used on input line 69.
+(pdftex.def)             Requested size: 164.41711pt x 107.56541pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/pie1.pdf): PDF inclusion: found PDF ve
+rsion <1.6>, but at most version <1.5> allowed
+<./img/pie1.pdf, id=217, 450.57936pt x 344.36154pt>
+File: ./img/pie1.pdf Graphic file (type pdf)
+<use ./img/pie1.pdf>
+Package pdftex.def Info: ./img/pie1.pdf  used on input line 73.
+(pdftex.def)             Requested size: 140.92793pt x 107.70204pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./img/evol.pdf): PDF inclusion: found PDF ve
 rsion <1.6>, but at most version <1.5> allowed
-<./img/evol.pdf, id=206, 561.71588pt x 176.40706pt>
+<./img/evol.pdf, id=222, 561.71588pt x 176.40706pt>
 File: ./img/evol.pdf Graphic file (type pdf)
 <use ./img/evol.pdf>
 Package pdftex.def Info: ./img/evol.pdf  used on input line 82.
 (pdftex.def)             Requested size: 328.82707pt x 103.27173pt.
-[3 <./img/bar.pdf, page is rotated 90 degrees> <./img/pie.pdf, page is rotated 
-90 degrees>]
+[3 <./img/bar1.pdf, page is rotated 90 degrees> <./img/pie1.pdf, page is rotate
+d 90 degrees> <./img/evol.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./img/resistant.pdf): PDF inclusion: found P
 DF version <1.6>, but at most version <1.5> allowed
-<./img/resistant.pdf, id=264, 580.78682pt x 412.59445pt>
+<./img/resistant.pdf, id=518, 580.78682pt x 412.59445pt>
 File: ./img/resistant.pdf Graphic file (type pdf)
 <use ./img/resistant.pdf>
 Package pdftex.def Info: ./img/resistant.pdf  used on input line 102.
 (pdftex.def)             Requested size: 328.82707pt x 233.60106pt.
-[4 <./img/evol.pdf> <./img/resistant.pdf, page is rotated 90 degrees>]
+[4 <./img/resistant.pdf, page is rotated 90 degrees>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 118.
+               Default added (so using `tbp') on input line 119.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 122.
+(Font)              <9> on input line 123.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 122.
+(Font)              <5> on input line 123.
 
-Overfull \hbox (8.0551pt too wide) in paragraph at lines 122--137
+Overfull \hbox (8.0551pt too wide) in paragraph at lines 123--138
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--137
+Underfull \hbox (badness 10000) in paragraph at lines 123--138
 
  []
 
 
-Overfull \hbox (3.58975pt too wide) in paragraph at lines 148--149
+Overfull \hbox (3.58975pt too wide) in paragraph at lines 149--150
 []$[]$ \OT1/cmr/m/n/10.95 Methicillin-resistant Staphy-lo-coc-cus au-
  []
 
-[5] [6] [7] (./sections/approach.tex
+[5] [6] [7] (./sections/fromula.tex) (./sections/p1.tex) (./sections/p2.tex)
+(./sections/p3.tex) (./sections/approach.tex [8]
 Overfull \hbox (7.27509pt too wide) in paragraph at lines 5--6
 []\OT1/cmr/m/n/10.95 For pa-tient spe-cific pre-dic-tion, con-sider/contrast wi
 th \OT1/cmr/m/it/10.95 Cox pro-por-tional haz-ards model \OT1/cmr/m/n/10.95 (CP
 HM),
  []
 
-[8])) [9] (./sch.bbl [1] [2]
+)) [9] [10] (./sch.bbl [1] [2]
 Underfull \hbox (badness 2237) in paragraph at lines 242--245
 []\OT1/cmr/m/n/10.95 ``Health it and health in-for-ma-tion ex-change ba-sics,''
  [][]$https : / / www . healthit . gov / topic /
@@ -484,15 +490,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
  (./sch.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
-Package rerunfilecheck Info: File `sch.out' has not changed.
-(rerunfilecheck)             Checksum: 57CABCC3ACB22CCABF7F33F00A82687A;1395.
+
+
+Package rerunfilecheck Warning: File `sch.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `sch.out':
+(rerunfilecheck)             Before: C094BBD94D78E5075CA9AC033BB7C32D;1746
+(rerunfilecheck)             After:  9A079BFAF096B3B41DC74F7D455321F4;1767.
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
- 7541 strings out of 492639
- 114477 string characters out of 6133102
- 219540 words of memory out of 5000000
- 11226 multiletter control sequences out of 15000+600000
+ 7565 strings out of 492639
+ 114846 string characters out of 6133102
+ 219544 words of memory out of 5000000
+ 11232 multiletter control sequences out of 15000+600000
  10078 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,46p,1989b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -503,10 +519,10 @@ t/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb>
-Output written on sch.pdf (20 pages, 470355 bytes).
+Output written on sch.pdf (22 pages, 594847 bytes).
 PDF statistics:
- 820 PDF objects out of 1000 (max. 8388607)
- 728 compressed objects within 8 object streams
- 112 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 888 PDF objects out of 1000 (max. 8388607)
+ 767 compressed objects within 8 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,32 @@
+How do we come up with the labels from the data? 
+
+- The simplest way to label is to consider data points only at the admission time or post surgery time. 
+- More complicated way of labeling is to label every instance one time window before the incident as one. 
+
+
+- Homogeneous feature MTL is the first case
+
+Notation:
+	MTL is the general framework of handling our problem:Define tasks, homo-features, ...
+	Why do we elevate something as a task? (When to share)
+		- Domain expert: previously people have considered HAI types separately. 
+			- Human expert is the one deciding in the literature.
+			- Cross-validation is computationally intensive. 
+		- We gain more flexibility and interpretability. 
+	
+Fast optimization method for solving any of these. 
+	
+P1: Focus on one facility but predict multiple MDRO infections. 
+Talk about the history of multi task learning: parameter, feature ?, instance based sharing. 
+
+	- Time to event (listen to Kevin's comment)
+	- 
+
+P2: 
+a) Focus on multiple facilities but predict one MDRO: MTL for single MDRO heterogeneous
+b) Focus on multiple facilities but predict multiple MDRO: MTL with multiple output MDRO heterogeneous
+ - Here we go beyond the known MTL literature
+ 
+P3: Intervention
+
+

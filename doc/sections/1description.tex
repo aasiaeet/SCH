@@ -35,7 +35,7 @@ The ML system that we envision is a framework for surveillance of ``hot spots'' 
 % What has been done? What can be done to improve? 
 {\bf Significance:} The United States has made significant progress toward the collective goal of eliminating HAIs, and as a result, healthcare in the U.S. is safer now than it was even 10 years ago. Building upon this success and continuing towards the elimination of HAIs is critical \cite{actionplan}. With the rise of MDROs in U.S. \cite{pop2005rising,edlin1992outbreak, whitney2000increasing} and the CDC's goal of substantially reducing multiple types of HAIs by 2020 \cite{milestones}, addressing MDROs-causing HAIs is of extreme value.  
 
-There has been focused studies to predict patients' risk of developing infection due to the more frequent MDROs using EHRs. Clostridioides difficile (C. diff.), the most prevalent cause of HAI which sometimes become drug-resistant \cite{tenover2012antimicrobial, peng2017update, spigaglia2016recent}, has been extensively studied \cite{oh2018generalizable, wiens2012learning, wiens2014learning, wiens2012patient}.  Methicillin-resistant Staphylococcus aureus (MRSA) is the second most frequent pathogen whose risk prediction from EHR has been recently studied in isolation \cite{hartvigsen2018early}. Due to the scarcity of HAIs associated with other MDROs, comprehensive analysis of risk factors and risk stratification of patients for them remained unexplored. Since the distribution of frequent pathogens and their resistance pattern are changing \cite{weiner2016antimicrobial} and many of the extremely rare MDROs are more fatal than their rare counterparts \cite{resistance}, comprehensive investigation of all HAIs caused by MDROs is of extreme significance. 
+There has been focused studies to predict patients' risk of developing infection due to the more frequent MDROs using EHRs. Clostridioides difficile (C. diff.), the most prevalent cause of HAI which sometimes become drug-resistant \cite{tenover2012antimicrobial, peng2017update, spigaglia2016recent}, has been extensively studied \cite{oh2018generalizable, wiens2012learning, wiens2014learning, wiens2012patient}.  Methicillin-resistant Staphylococcus aureus (MRSA) is the second most frequent pathogen whose risk prediction from EHR has been recently studied in isolation \cite{hartvigsen2018early, robicsek2011electronic}. Due to the scarcity of HAIs associated with other MDROs, comprehensive analysis of risk factors and risk stratification of patients for them remained unexplored. Since the distribution of frequent pathogens and their resistance pattern are changing \cite{weiner2016antimicrobial} and many of the extremely rare MDROs are more fatal than their rare counterparts \cite{resistance}, comprehensive investigation of all HAIs caused by MDROs is of extreme significance. 
 
 %(e.g., healthcare-associated exposure, age, underlying disease, etc.), HAIs
 %continue to be a signicant problem throughout the world (Klevens et al., 2007). In recent
@@ -66,12 +66,12 @@ One of the key initiatives of the US government to decrease cost and improve hea
 	\subcaptionbox{
 		Per case cost.
 		\label{bar}
-	}{\includegraphics[width=0.30 \textwidth,]{./img/bar}}~
+	}{\includegraphics[width=0.35 \textwidth,]{./img/bar1}}~
 	\subcaptionbox{
 		Contribution percentage.
 		\label{pie}
-	}{\includegraphics[width=0.30 \textwidth]{./img/pie}}
-	\caption{Cost of the five most common HAIs in the U.S. reaches the total of \$9.8 billion annually. Data source from \cite{zimlichman2013health} and figures from \cite{center}}.
+	}{\includegraphics[width=0.3 \textwidth]{./img/pie1}}
+	\caption{Cost of the five most common HAIs in the U.S. reaches the total of \$9.8 billion annually. Data source from \cite{zimlichman2013health} and figures from \cite{center}.}
 	\label{money}
 \end{figure}
 
@@ -95,7 +95,7 @@ Though the rate of many HAI types have dropped over the last decade \cite{progre
 
 %{\bf Multi-drug resistant organism (MDRO) infection:} An infection caused by a microorganism, predominantly bacteria, that is resistant to multiple classes of antimicrobials. In some cases, the bacteria have become so resistant that no available antibiotics are effective against them. In most instances, MDRO infections have clinical manifestations that are similar to infections caused by susceptible pathogens. However, options for treating patients with these infections are often extremely limited 
 
-Multi-drug resistance has been prevailed over the last decade due to overuse of antibiotics in different settings, e.g., food animal production \cite{landers2012review}. One of the main places that hosts most of MDROs are healthcare facilities, Figure \ref{resistant}. Although transmission of MDROs is most frequently documented in acute care facilities, all healthcare settings are affected by the emergence and transmission of antimicrobial-resistant microbes. It should be noted that, the severity and extent of disease caused by MDROs varies by the population(s) affected and by the institution(s) in which they are found. For example, risk of patients in institutions with varying physical and functional characteristics, like long-term care facilities, intensive care units (ICU), burn units, neonatal ICUs are varying a lot \cite{siegel2007management}. Therefore one can not build a risk prediction model for an MDRO using data from one population and transfer the built model to another facility and use it for another population of patients without suffering from prediction loss \cite{wiens2014study}. Because of this, any risk prediction model of these pathogens need to be tailored to the specific needs of each population and individual institution \cite{siegel2007management, wiens2014study}. 
+Multi-drug resistance has been prevailed over the last decade due to overuse of antibiotics in different settings, e.g., food animal production \cite{landers2012review}. One of the main places that hosts many MDROs are healthcare facilities, Figure \ref{resistant}. Although transmission of MDROs is most frequently documented in acute care facilities, all healthcare settings are affected by the emergence and transmission of antimicrobial-resistant microbes. It should be noted that, the severity and extent of disease caused by MDROs varies by the population(s) affected and by the institution(s) in which they are found. For example, risk of patients in institutions with varying physical and functional characteristics, like long-term care facilities, intensive care units (ICU), burn units, neonatal ICUs are varying a lot \cite{siegel2007management}. Therefore one can not build a risk prediction model for an MDRO using data from one population and transfer the built model to another facility and use it for another population of patients without suffering from prediction loss \cite{wiens2014study}. Because of this, any risk prediction model of these pathogens need to be tailored to the specific needs of each population and individual institution \cite{siegel2007management, wiens2014study}. 
 
 \begin{figure}
 	\centering
@@ -106,13 +106,14 @@ Multi-drug resistance has been prevailed over the last decade due to overuse of 
 
 %In previous section we briefly introduced the HAI prediction problem caused by rare MDROs and discussed its importance. 
  %A study found that 16\% of all HAIs are caused by MDROs \cite{hidron2008antimicrobial}.
-In most cases, antibiotic-resistant infections require extended hospital stays, additional follow-up doctor visits, and costly toxic alternatives \cite{amr, resistance}. In 2013, the Centers for Disease Control and Prevention (CDC) published a threat report outlining the top eighteen drug-resistant threats to the U.S. eight of which are healthcare associated with more than 600,000 total occurrences and around 30000 death per year \cite{resistance}. To dive into more scientific details of HAI and also elaborating our data source, in the following, we first introduce the required terminology and then present our dataset. For conveniance Table \ref{tab1} summarizes all of the acronyms and their description. 
+In most cases, antibiotic-resistant infections require extended hospital stays, additional follow-up doctor visits, and costly toxic alternatives \cite{amr, resistance}. In 2013, the Centers for Disease Control and Prevention (CDC) published a threat report outlining the top eighteen drug-resistant threats to the U.S. eight of which are healthcare associated with more than 600,000 total occurrences and around 30000 death per year \cite{resistance}. To dive into more scientific details of HAI and also elaborating our data source, in the following, we first introduce the required terminology and then present our dataset. For convenience, Table \ref{tab1} summarizes all of the acronyms and their description. 
 
 % We want to show that they are not studied together. 
 {\bf Types of HAI:}
-HAIs are categorize by CDC into two broad categories of device-associated infections (DAI) or Surgical-Site Infections (SSI) \cite{mu2011improving, de2006surgical, friedman2007alternative, chiang2014risk}. Primary device-associated infections include Central Line-Associated Bloodstream Infection (CLABSI) \cite{wylie2010risk, noaman2017improving, schoonover2017accurately, herc2017model, parreco2018predicting}, Catheter-Associated Urinary Tract Infection (CAUTI) \cite{grana2015detection, tambyah2004catheter, siddiq2012new}, and Ventilator-Associated Pneumonia (VAP) \cite{froon1998prediction, larsson2017risk, lisboa2008ventilator, kruger2011prognosis, mirsaeidi2009predicting}. Unfortunately, in all of the cited studies, only one type of HAI is studied in isolation. Based on these studies, many different risk scores have been developed, and preventative measures have been suggested. 
+HAIs are categorize by CDC into two broad categories of device-associated infections (DAI) or Surgical-Site Infections (SSI) \cite{mu2011improving, de2006surgical, friedman2007alternative, chiang2014risk}. Primary device-associated infections include Central Line-Associated Bloodstream Infection (CLABSI) \cite{wylie2010risk, noaman2017improving, schoonover2017accurately, herc2017model, parreco2018predicting}, Catheter-Associated Urinary Tract Infection (CAUTI) \cite{grana2015detection, tambyah2004catheter, siddiq2012new}, and Ventilator-Associated Pneumonia (VAP) \cite{froon1998prediction, larsson2017risk, lisboa2008ventilator, kruger2011prognosis, mirsaeidi2009predicting}. Unfortunately, in all of the cited studies, only a single type of HAI is studied in isolation. Based on these studies, many different risk scores have been developed, and preventative measures have been suggested. 
 
-To fully harness the power of data, we suggest to study \emph{all} of different types of HAIs together while incorporating the relation of different prediction task in our model. We hypothesized that for a specific infection-causing pathogen, all of the HAIs may share similar risk factors and at the same time each one should have its dedicated important risk factor. We suggest to model the risk of an HAI as a multi-task learning where task are hierarchically related. For example, all HAIs are divided to DAIs and SSIs while DAIs are divided to subtasks based on the relevant device and SSIs are divided based on the place of surgery. Thus, we enrich our dataset by considering are HIAs together and we are capturing shared and individual per-task risk factors at the same time. 
+To fully harness the power of data, we suggest to study patients' risks of \emph{all} types of HAIs simultaneously while incorporating the relation of different prediction task in our model. We hypothesized that for a specific infection-causing pathogen, all of the HAIs may share similar risk factors and at the same time each one should have its dedicated important risk factor. For example, one of the main shared risk factors for CDI is recent antibiotic use which is shared among all patients. But patients who had colon surgery have more specific risk factors for developing CDI like length of incision.
+We suggest to model the risk of an HAI as a multi-task learning where task are hierarchically related. All HAIs are divided to DAIs and SSIs while DAIs are divided to subtasks based on the relevant device and SSIs are divided based on the place of surgery. Thus, we enrich our dataset with more samples by considering all HIAs together and we are capturing shared and individual per-task risk factors at the same time. 
 
 %Recent studies show reductions in CLABSI incidents due to the advancement in preventative activities while SSI and CAUTI have not experienced the same trend. Different types of HAI can be caused by various organism. 
 \begin{table}[]
@@ -144,33 +145,25 @@ A perpendicular categorization of HAIs is based on the pathogen causing the infe
 \begin{itemize}
 	\item \underline{Clostridium difficile (CDI):} CDI also known by C. diff bacteria causes life-threatening diarrhea and colitis (an inflammation of the colon). 
 	%It was estimated to cause almost half a million infections in the United States in 2011, and 29,000 died within 30 days of the initial diagnosis. 
-	Those most at risk are people, especially older adults, who take antibiotics and also get medical care. CDC classifies CDI as an urgent threat and estimates it causes 500,000 infections per year where 29,000 died within 30 days of the initial diagnosis and 15000 death cases were directly attributed to CDI \cite{resistance}. Although CDI in general is not considered as MDROs but some variant of it shows resistant to antibiotic  \cite{tenover2012antimicrobial, spigaglia2016recent} and it is monitored by CDC along with other MDROs \cite{cdimdro}. 
+	Those most at risk are people, especially older adults, who take antibiotics and also get medical care. CDC classifies CDI as an urgent threat and estimates it causes 500,000 infections per year 29,000 of which die within 30 days of the initial diagnosis and 15000 death cases were directly attributed to CDI \cite{resistance}. Although CDI in general is not considered as an MDRO but some variant of it shows resistant to antibiotic  \cite{tenover2012antimicrobial, spigaglia2016recent} and it is monitored by CDC along with other MDROs \cite{cdimdro}. 
 	\item \underline{Methicillin-resistant Staphylococcus aureus (MRSA):}  Methicillin-resistant Staphylococcus aureus (MRSA) is a type of staph bacteria that is resistant to certain antibiotics called beta-lactams and has been classified as a serious threat by CDC \cite{resistance}. These antibiotics include methicillin and other more common antibiotics such as oxacillin, penicillin, and amoxicillin. Severe or potentially life-threatening MRSA infections occur most frequently among patients in healthcare settings. By CDC estimate, every year 80400 MRSA infections are happening in the U.S. where more than 11200 of them lead to death \cite{resistance}. 
 	\item \underline{Vancomycin-resistant Enterococcus (VRE):} Enterococci cause a range of illnesses, mostly among patients receiving healthcare. Vancomycin-resistant Enterococci are specific types of antimicrobial-resistant bacteria that are resistant to vancomycin, the drug often used to treat infections caused by enterococci. Enterococci are bacteria that are typically present in the human intestines and in the female genital tract and are often found in the environment. Vancomycin-resistant Enterococci infections is considered a serious threat with the death toll of 1300 per year \cite{resistance}.
 	\item \underline{Gram-Negative Bacteria (GNB):} GNB is a group of pathogens cause infections including pneumonia, bloodstream infections, wound or SSI, and meningitis in healthcare settings. GNB are resistant to multiple drugs and are increasingly resistant to most available antibiotics. These bacteria have built-in abilities to find new ways to be resistant and can pass along genetic materials that allow other bacteria to become drug-resistant as well \cite{resistance}. Gram-negative infections include those caused by Klebsiella, Acinetobacter, Pseudomonas aeruginosa, and E. coli., as well as many other less common bacteria \cite{gnb}.  
 \end{itemize}
 
+{\bf HAI Data Collection:} As a part of CDC the National Healthcare Safety Network (NHSN) is the nation’s most widely used HAI tracking system. Since 2009, infection data has been reported to the NHSN to track the national progress of the reduction of HAIs. For reporting to the NHSN; an infection should be considered as laboratory identified (LabID), i.e., a patient sample should be tested and confirmed positive by laboratory test only (i.e., clinical evaluation of the patient is not required). For LabID events, an infection is considered hospital-onset if the positive specimen is collected on or after the fourth day of admission. NHSN collects hospital-onset LabID infection events to compute different statistics which provides CDC evidence to detect more susceptible healthcare facilities and properly intervene to improve them. 
 
 
-
-
-
-There have been many model developed ... 
+Standardized Infection Ratio (SIR) is a statistic used to track HAIs over time, at a national, state, or facility level. The SIR is the ratio of the actual number of HAIs at each hospital, to the predicted number of infections. The predicted number is an estimate based on national baseline data, and it is risk adjusted. Risk adjustment takes into account that some hospitals treat sicker patients than others.
+Targeted Assessment for Prevention (TAP) is a CDC program that uses data and SIR statistics to identify facilities and units with the most significant burden of excess HAI and target efforts to most efficiently reach prevention goals. TAP guides facilities to customize their interventions to address the identified disproportionate HAIs properly.  
+%There have been many model developed ... 
 
 %{\bf Antimicrobial resistance} The result of bacteria changing in ways that reduce or eliminate the effectiveness of drugs, chemicals, or other agents used to cure or prevent infections. Antibiotic resistance is one type of antimicrobial resistance.
 
-NHSN: The National Healthcare Safety Network, of the Centers for Disease Control and Prevention (CDC), is the nation’s most widely used health care-associated infection tracking system. Since 2009, infection data has been reported to the NHSN to track the national progress of the reduction of HAIs.
-  
-
-{\bf Laboratory identified (LabID) Event:} For reporting to the National Healthcare Safety Network; an infection is considered laboratory
-identified when a patient sample is tested and confirmed positive by laboratory test only (i.e., clinical evaluation of the patient is not required).
-
-{\bf Hospital-onset HAI:} For LabID events, an infection is considered hospital-onset if the positive specimen is collected on or after the fourth day of admission.
-
-{\bf Targeted Assessment for Prevention (TAP) strategy:} It is known that some hospitals and some units are more susceptible to MDROs and therefore have higher number of HAI cases. TAP is a method developed by the CDC to use data for action to prevent HAIs. The TAP strategy targets healthcare facilities and specific units within facilities with a disproportionate burden of
-HAIs to address infection prevention gaps.
-
-{\bf Standardized Infection Ratio (SIR):} SIR is a statistic used to track HAIs over time, at a national, state, or facility level. The SIR is the ratio of the actual number of HAIs at each hospital, to the predicted number of infections. The predicted number is an estimate based on national baseline data, and it is risk adjusted. Risk adjustment takes into account that some hospitals treat sicker patients than others.
+%{\bf :} It is known that some hospitals and some units are more susceptible to MDROs and therefore have higher number of HAI cases. TAP is a method developed by the CDC to use data for action to prevent HAIs. The TAP strategy targets healthcare facilities and specific units within facilities with a burden of
+%HAIs to address infection prevention gaps.
+%
+%{\bf :} 
 
 
 %Methicillin-resistant Staphylococcus aureus (MRSA): A type of staph bacteria that is resistant to many antibiotics. In this report, the MRSA data include all laboratory identified hospital-onset MRSA bacteremia (bloodstream infections) reported to the National Healthcare Safety Network from all inpatient locations in
@@ -248,7 +241,6 @@ We will leverage IDEA4PS data to train our ML system, DEALER and integrate it to
 Although it seems that for the patients with higher risk of infection the care team should carry out the most effective interventions, in reality, this is not the best measure. Serious interventions are usually more difficult to tolerate by the patient, and they are of more significant cost for the healthcare system. Besides, for the specific intervention of antibiotic administration the rise of drug-resistant organisms urge us to use antibiotics only if they are absolutely necessary and by following strict ``antibiotic stewardship'' guidelines.
 
 The epidemiology of emergent MDROs in health care settings must be monitored to allow for appropriate adaptations to current infection control interventions, including antimicrobial prophylaxis, isolation strategies, and screening strategies. Vaccines are also a powerful way to prevent thousands of infections and deaths that occur each year for diseases such as influenza and hepatitis. Currently, there are eight vaccines licensed in the U.S. that target pathogens that can be acquired in health care settings. The appropriate use of these lifesaving interventions needs to be defined.
-
 A successful ML system should take into account the range of possible intervention and based on its confidence about the predicted outcome suggest a proper intervention.
 
 
@@ -294,7 +286,10 @@ We describe below some of the key technical challenges involved in addressing th
 
 \subsection{Technical Approach}
 {\bf Notation:} 
-
+\input{sections/fromula}
+\input{sections/p1}
+\input{sections/p2}
+\input{sections/p3}
 
 
 \input{sections/approach}
